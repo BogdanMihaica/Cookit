@@ -1,0 +1,96 @@
+.homepage-container {
+  width: 100%;
+  height: auto;
+}
+.section-one {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-circle {
+  z-index: -1;
+  position: absolute;
+  border-radius: 0 0 0 50%;
+  background: url("../../public/images/background-home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 800px;
+  height: 700px;
+  top: 0;
+  right: 0;
+}
+.home-login-info {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.home-login-info .welcome {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.home-login-info .info {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.button-container button {
+  padding: 10px 20px;
+  border-radius: 20px;
+
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button-sign-in {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+@keyframes bgcolor {
+  0% {
+    background-color: rgb(83, 14, 28);
+  }
+  50% {
+    background-color: rgb(0, 0, 0);
+  }
+  100% {
+    background-color: rgb(83, 14, 28);
+  }
+}
+.button-explore {
+  animation: bgcolor infinite;
+  animation-duration: 4s;
+
+  background-color: black;
+  color: white;
+}
+
+.button-sign-in:hover {
+  background-color: #f0f0f0;
+}
+
+.button-explore:hover {
+  background-color: #333;
+}
+
+.chef-img {
+  height: 500px;
+  margin-left: 10rem;
+}

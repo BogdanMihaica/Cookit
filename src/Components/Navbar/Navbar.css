@@ -1,24 +1,32 @@
 #cssmenu {
-  width: auto;
-  display: block;
-  text-align: center;
-  font-family: "Lato";
-  line-height: 1.2;
-}
-#cssmenu ul {
-  width: auto;
-  display: block;
-  font-size: 0;
-  text-align: center;
-  color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #000000;
-  border: transparent;
+  flex-wrap: wrap;
+  z-index: 10000;
+}
+
+.logo {
+  height: 100%;
+  max-height: 50px;
+}
+
+.logo img {
+  margin-left: 10px;
+  transform: translateY(-10px);
+  height: 100%;
+  width: auto;
+}
+
+#cssmenu ul {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   list-style: none;
-  position: relative;
-  z-index: 999999990;
-  border-radius: 3px;
+  color: #eeeeee;
 }
 
 #cssmenu li {
@@ -29,15 +37,21 @@
   padding: 0;
 }
 
-/*Top level items
----------------------------------------*/
+#cssmenu .logo {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-size: contain;
+  transform: translateY(10px);
+  height: 2.5rem;
+}
 
 #cssmenu > ul > li > span,
 #cssmenu > ul > li > a {
-  font-size: 22px;
+  font-size: 17px;
   color: inherit;
   text-decoration: none;
-  padding: 14px 20px;
+  padding: 19px 20px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -45,14 +59,13 @@
   position: relative;
   transition: all 0.3s;
 }
+
 #cssmenu li:hover > span,
 #cssmenu li:hover > a {
   color: #333333;
   background-color: #f3f3f3;
 }
 
-/*Sub level items
----------------------------------------*/
 #cssmenu .dropdown {
   text-align: left;
   left: 0;
@@ -84,10 +97,12 @@
   color: inherit;
   text-decoration: none;
 }
+
 #cssmenu .clm h3 {
   font-size: 20px;
   font-weight: 700;
 }
+
 #cssmenu .sub-item {
   background-color: #f3f3f3;
   position: relative;
@@ -111,6 +126,7 @@
   left: auto;
   right: 0;
 }
+
 #cssmenu .dropdown li > .dropdown.right0 {
   left: auto;
   right: 100%;
@@ -119,6 +135,7 @@
 #cssmenu li.full-width {
   position: static;
 }
+
 #cssmenu li.full-width .dropdown {
   width: 100%;
   left: 0;
@@ -145,11 +162,10 @@
   text-align: center;
 }
 
-/* each column */
 #cssmenu .clm {
   text-align: left;
   margin: 20px;
-  vertical-align: top; /*or middle*/
+  vertical-align: top;
   width: auto;
   min-width: 240px;
   display: inline-block;
@@ -160,7 +176,6 @@
   text-decoration: underline;
 }
 
-/*-----------Arrows----------------*/
 #cssmenu .arrow {
   color: inherit;
   border-style: solid;
@@ -196,35 +211,133 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
 #cssmenu li a {
   animation: none;
 }
+
 #cssmenu.active li a {
   animation: topItemAnimation 0.5s cubic-bezier(0.16, 0.84, 0.44, 1)
     0.08333333333333333s backwards;
 }
+
 #cssmenu.active li:nth-of-type(1) a {
   animation: topItemAnimation 0.5s cubic-bezier(0.16, 0.84, 0.44, 1) 0.5s
     backwards;
 }
+
 #cssmenu.active li:nth-of-type(2) a {
   animation: topItemAnimation 0.5s cubic-bezier(0.16, 0.84, 0.44, 1)
     0.4166666666666667s backwards;
 }
+
 #cssmenu.active li:nth-of-type(3) a {
   animation: topItemAnimation 0.5s cubic-bezier(0.16, 0.84, 0.44, 1)
     0.3333333333333333s backwards;
 }
+
 #cssmenu.active li:nth-of-type(4) a {
   animation: topItemAnimation 0.5s cubic-bezier(0.16, 0.84, 0.44, 1) 0.25s
     backwards;
 }
+
 #cssmenu.active li:nth-of-type(5) a {
   animation: topItemAnimation 0.5s cubic-bezier(0.16, 0.84, 0.44, 1)
     0.16666666666666666s backwards;
 }
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   #cssmenu.active li a {
     animation: none !important;
+  }
+}
+
+#searchBarContainer {
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  margin: auto;
+}
+
+#searchBar {
+  width: 100%;
+  padding: 10px 50px 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+#searchButton {
+  position: absolute;
+  right: 10px;
+  top: calc(50%);
+  transform: translateY(-50%);
+  background-color: #777777;
+  border: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#searchButton:hover {
+  background-color: #000000;
+}
+
+.magnifying-glass {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  #cssmenu {
+    flex-direction: column;
+    align-items: center; /* Center the content */
+  }
+
+  .logo {
+    margin: 10px 0; /* Add some vertical spacing */
+  }
+
+  #cssmenu ul {
+    justify-content: center;
+    width: 100%;
+  }
+
+  #cssmenu li {
+    display: block;
+    width: 100%;
+  }
+
+  /* Move the search bar below the menu items */
+  #searchBarContainer {
+    width: 100%; /* Make it full width */
+    margin-top: 10px; /* Add some space from the menu */
+  }
+
+  #cssmenu > ul > li > span,
+  #cssmenu > ul > li > a {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  #searchBarContainer {
+    width: 90%;
+  }
+  #cssmenu > ul > li > span,
+  #cssmenu > ul > li > a {
+    font-size: 15px;
   }
 }
