@@ -23,11 +23,11 @@
   right: 0;
 }
 .home-login-info {
-  width: 30%;
+  width: 400px;
   height: auto;
   position: absolute;
   top: 15%;
-  left: 10%;
+  left: 6%;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
@@ -89,8 +89,7 @@
 .button-explore:hover {
   background-color: #333;
 }
-
-.chef-img {
-  height: 500px;
-  margin-left: 10rem;
+.section-two {
+  width: 100%;
+  margin-top: 5rem;
 }

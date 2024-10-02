@@ -1,3 +1,9 @@
+#menuDemo {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 100000;
+}
 #cssmenu {
   display: flex;
   align-items: center;
@@ -253,16 +259,16 @@
 }
 
 #searchBarContainer {
+  margin-left: 4rem;
   width: 80%;
   max-width: 400px;
   position: relative;
   border-top: 10px solid black;
   border-bottom: 10px solid black;
-  margin: auto;
 }
 
 #searchBar {
-  width: 100%;
+  width: 20rem;
   padding: 10px 50px 10px 15px;
   font-size: 16px;
   border: 1px solid #ddd;
@@ -274,8 +280,8 @@
 }
 
 #searchButton {
+  left: 17.8rem;
   position: absolute;
-  right: 10px;
   top: calc(50%);
   transform: translateY(-50%);
   background-color: #777777;
@@ -283,7 +289,7 @@
   padding: 0;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: 500px;
   cursor: pointer;
   transition: background-color 0.3s;
   display: flex;
@@ -323,7 +329,8 @@
 
   /* Move the search bar below the menu items */
   #searchBarContainer {
-    width: 100%; /* Make it full width */
+    position: relative;
+    width: auto; /* Make it full width */
     margin-top: 10px; /* Add some space from the menu */
   }
 
@@ -338,6 +345,7 @@
   }
   #cssmenu > ul > li > span,
   #cssmenu > ul > li > a {
+    text-align: center;
     font-size: 15px;
   }
 }

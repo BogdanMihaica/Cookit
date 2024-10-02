@@ -1,0 +1,165 @@
+:root {
+  --velvet-red: #9b1b30;
+  --gray: #d3d3d3;
+}
+
+.recipes-full {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-bar {
+  padding: 16px 20px;
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid var(--gray);
+  border-radius: 25px 0 0 25px;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.search-button {
+  background-color: var(--velvet-red);
+  border: none;
+  border-radius: 0 25px 25px 0;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: -5px;
+}
+
+.search-button:hover {
+  background-color: #7b1a28;
+}
+
+.search-icon {
+  color: white;
+  font-size: 1rem;
+}
+
+.category-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category-button {
+  padding: 1px 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 0.9rem;
+  max-width: 120px;
+  text-align: center;
+}
+
+.category-button.selected {
+  background-color: var(--velvet-red);
+  color: white;
+}
+
+.category-button:hover {
+  background-color: var(--gray);
+}
+
+.recipes-container {
+  padding: 2rem;
+  border: none;
+  margin: 0 2rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.recipes-container > div {
+  transform: scale(1);
+}
+
+.recipes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.pagination button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--velvet-red);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #7b1a28;
+}
+
+.pagination button:disabled {
+  background-color: var(--gray);
+  cursor: not-allowed;
+}
+@media (max-width: 1044px) {
+  .recipes-full {
+    margin-top: 8rem;
+  }
+}
+@media (max-width: 768px) {
+  .recipes-list {
+    gap: 0.2rem;
+  }
+  .recipes-full {
+    margin-top: 10rem;
+  }
+  .recipes-container {
+    padding: 1rem;
+  }
+
+  .recipes-list > div {
+    transform: scale(
+      0.7
+    ); /* Ensure the scaling is applied to each recipe item */
+  }
+
+  .search-container {
+    margin-top: 3rem; /* Push search bar down */
+  }
+
+  .search-bar {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .search-button {
+    padding: 10px 12px; /* Adjust padding */
+  }
+
+  .pagination button {
+    font-size: 1rem; /* Reduce font size for pagination buttons */
+  }
+}
