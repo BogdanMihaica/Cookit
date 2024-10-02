@@ -12,7 +12,7 @@ body.no-scroll {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 10000000;
 }
 
 .popup {
@@ -24,43 +24,43 @@ body.no-scroll {
   animation: fadeIn 0.3s;
 }
 
-h2 {
+.popup h2 {
   margin-bottom: 20px;
   text-align: center;
 }
 
-form {
+.popup form {
   display: flex;
   flex-direction: column;
 }
 
-form div {
+.popup form div {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
 
-label {
+.popup label {
   margin-right: 10px;
-  width: 80px; /* Adjust width to align labels */
+  width: 80px;
 }
 
-input[type="email"],
+.popup input[type="email"],
 input[type="password"] {
   width: 250px;
   padding: 10px;
   border: 1px solid #cccccc;
   border-radius: 5px;
   transition: border 0.3s;
-  margin-left: 0; /* Remove margin-left */
+  margin-left: 0;
 }
-input[type="email"]:focus,
+.popup input[type="email"]:focus,
 input[type="password"]:focus {
   border-color: #5367ff;
   outline: none;
 }
 
-button[type="submit"] {
+.popup button[type="submit"] {
   background-color: #000000;
   color: white;
   padding: 10px;
@@ -70,7 +70,7 @@ button[type="submit"] {
   transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
+.popup button[type="submit"]:hover {
   background-color: #792e2e;
 }
 

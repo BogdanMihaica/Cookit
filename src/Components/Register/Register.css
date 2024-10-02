@@ -61,12 +61,12 @@ input[type="email"]:focus {
 .newsletter-checkbox {
   display: flex;
   align-items: center;
-  margin-top: 20px; /* Increase margin to provide space above */
-  margin-bottom: 15px; /* Add margin below to separate it from other elements */
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .newsletter-checkbox input {
-  margin-right: 10px; /* Space between checkbox and label */
+  margin-right: 10px;
 }
 
 button[type="submit"] {
@@ -85,6 +85,6 @@ button[type="submit"]:hover {
 }
 @media (max-width: 768px) {
   .register-container {
-    margin-top: 15rem; /* Adjust this value as needed */
+    margin-top: 15rem;
   }
 }

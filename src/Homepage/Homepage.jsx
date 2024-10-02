@@ -38,7 +38,12 @@ export default function Homepage() {
               <button className="button-sign-in" onClick={togglePopup}>
                 Sign In
               </button>
-              <button className="button-explore">Explore</button>
+              <button
+                className="button-explore"
+                onClick={() => nav("/recipes")}
+              >
+                Explore
+              </button>
             </div>
           </div>
 

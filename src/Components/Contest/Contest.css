@@ -1,0 +1,34 @@
+.contest-container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.contest-name,
+.see-details {
+  width: 100%;
+  height: 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+p {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.contest-name {
+  background-color: white;
+  color: black;
+}
+.see-details {
+  background-color: black;
+  color: white;
+}
+.contest-photo {
+  height: calc(400px - 6rem);
+}

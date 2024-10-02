@@ -7,6 +7,8 @@ import Homepage from "./Homepage/Homepage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Register } from "./Components/Register/Register";
 import Recipes from "./Components/Recipes/Recipes";
+import Contact from "./Components/Contact/Contact";
+import { Contests } from "./Components/Contests/Contests";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
   {
     path: "/recipes",
     element: <Recipes />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+  {
+    path: "/contests",
+    element: <Contests />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));

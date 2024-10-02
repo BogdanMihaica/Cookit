@@ -47,7 +47,7 @@ export const Navbar = () => {
             </span>
             <ul className="dropdown">
               <li>
-                <a href="/">Contests</a>
+                <a href="/contests">Contests</a>
               </li>
               <li>
                 <a href="/">Cooking techniques</a>
@@ -61,7 +61,7 @@ export const Navbar = () => {
             </ul>
           </li>
           <li>
-            <a href="/">Contact</a>
+            <a href="/contact">Contact</a>
           </li>
           <li className="sign">
             <a href="#" onClick={togglePopup}>

@@ -1,0 +1,27 @@
+.contests-container {
+  margin-top: 7rem;
+}
+.contests-title {
+  font-size: 3rem;
+  text-align: center;
+}
+.contests-description {
+  margin-inline: 5rem;
+  font-size: 1.3rem;
+  background-color: rgb(239, 239, 239);
+  padding: 1rem;
+}
+.contests-list {
+  margin-top: 3rem;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+@media (max-width: 768px) {
+  .contests-container {
+    margin-top: 10rem;
+  }
+}

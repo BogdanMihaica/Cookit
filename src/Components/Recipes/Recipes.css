@@ -1,5 +1,5 @@
 :root {
-  --velvet-red: #9b1b30;
+  --velvet-red: #000000;
   --gray: #d3d3d3;
 }
 
@@ -20,10 +20,19 @@
   width: 100%;
 }
 
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  width: 100%;
+}
+
 .search-bar {
   padding: 16px 20px;
-  width: 100%;
-  max-width: 900px;
+  flex-grow: 1; /* Allow the search bar to grow and take up more space */
+  max-width: 600px; /* Keep the max width as desired */
   border: 1px solid var(--gray);
   border-radius: 25px 0 0 25px;
   font-size: 1.2rem;
@@ -96,7 +105,7 @@
 .recipes-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 
@@ -142,24 +151,14 @@
   }
 
   .recipes-list > div {
-    transform: scale(
-      0.7
-    ); /* Ensure the scaling is applied to each recipe item */
+    transform: scale(0.7);
   }
 
   .search-container {
-    margin-top: 3rem; /* Push search bar down */
-  }
-
-  .search-bar {
-    font-size: 1rem; /* Adjust font size */
-  }
-
-  .search-button {
-    padding: 10px 12px; /* Adjust padding */
+    margin-top: 3rem;
   }
 
   .pagination button {
-    font-size: 1rem; /* Reduce font size for pagination buttons */
+    font-size: 1rem;
   }
 }
