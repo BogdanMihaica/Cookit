@@ -310,11 +310,11 @@
 @media (max-width: 768px) {
   #cssmenu {
     flex-direction: column;
-    align-items: center; /* Center the content */
+    align-items: center;
   }
 
   .logo {
-    margin: 10px 0; /* Add some vertical spacing */
+    margin: 10px 0;
   }
 
   #cssmenu ul {
@@ -327,11 +327,10 @@
     width: 100%;
   }
 
-  /* Move the search bar below the menu items */
   #searchBarContainer {
     position: relative;
-    width: auto; /* Make it full width */
-    margin-top: 10px; /* Add some space from the menu */
+    width: auto;
+    margin-top: 10px;
   }
 
   #cssmenu > ul > li > span,

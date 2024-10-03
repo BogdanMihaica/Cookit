@@ -1,0 +1,132 @@
+.contest-page-container {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  color: #333;
+  background-color: #fff;
+}
+@media (max-width: 768px) {
+  .contest-page-container {
+    margin-top: 12rem;
+  }
+}
+.contest-page-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.contest-page-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.contest-page-info {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 3rem;
+}
+
+.contest-page-info-item {
+  flex: 1;
+}
+
+.contest-page-info-label {
+  font-weight: bold;
+  color: #900;
+}
+
+.contest-page-content {
+  margin-top: 2rem;
+}
+
+.contest-page-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: #444;
+}
+
+.contest-page-subtitle {
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.contest-page-contestants {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.contestant-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.contest-page-comments {
+  margin-top: 3rem;
+}
+
+.contest-page-comment-box {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.contest-page-comment-button {
+  background-color: #900;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contest-page-comment-button:hover {
+  background-color: #b00;
+}
+
+.contest-page-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #900;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 3rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.contest-page-back-button:hover {
+  background-color: #b00;
+}
+
+.contest-page-back-icon {
+  margin-right: 0.6rem;
+}

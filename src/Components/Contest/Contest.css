@@ -1,3 +1,6 @@
+:root {
+  --contest-shadow: rgb(57, 57, 57);
+}
 .contest-container {
   width: 400px;
   height: 400px;
@@ -9,6 +12,13 @@
   cursor: pointer;
   border-radius: 20px;
   overflow: hidden;
+  transition: all 0.5s ease;
+}
+.contest-container:hover {
+  transform: translate(-10px, -10px);
+  -webkit-box-shadow: 10px 10px 0px -1px var(--contest-shadow);
+  -moz-box-shadow: 10px 10px 0px -1px var(--contest-shadow);
+  box-shadow: 10px 10px 0px -1px var(--contest-shadow);
 }
 .contest-name,
 .see-details {

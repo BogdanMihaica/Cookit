@@ -1,0 +1,97 @@
+.recipe-page-container {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  color: #333;
+  background-color: #fff;
+}
+@media (max-width: 768px) {
+  .recipe-page-container {
+    margin-top: 12rem;
+  }
+}
+.recipe-page-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.recipe-page-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.recipe-page-info {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 3rem;
+}
+
+.recipe-page-info-item {
+  flex: 1;
+}
+
+.recipe-page-info-label {
+  font-weight: bold;
+  color: #900;
+}
+
+.recipe-page-content {
+  margin-top: 2rem;
+}
+
+.recipe-page-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: #444;
+}
+
+.recipe-page-subtitle {
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.recipe-page-list {
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+}
+
+.recipe-page-list li {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+.recipe-page-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #900;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 3rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.recipe-page-back-button:hover {
+  background-color: #b00;
+}
+
+.recipe-page-back-icon {
+  margin-right: 0.6rem;
+}

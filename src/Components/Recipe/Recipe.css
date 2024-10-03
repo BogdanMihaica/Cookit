@@ -1,3 +1,6 @@
+:root {
+  --shadow-color: rgb(88, 88, 88);
+}
 .recipe-container {
   height: 350px;
   width: 300px;
@@ -11,6 +14,13 @@
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+.recipe-container:hover {
+  transform: translate(-5px, -5px);
+  -webkit-box-shadow: 5px 5px 0px -1px var(--shadow-color);
+  -moz-box-shadow: 5px 5px 0px -1px var(--shadow-color);
+  box-shadow: 5px 5px 0px -1px var(--shadow-color);
 }
 .image-container {
   width: 100%;
