@@ -11,6 +11,7 @@ import Contact from "./Components/Contact/Contact";
 import { Contests } from "./Components/Contests/Contests";
 import RecipePage from "./Components/RecipePage/RecipePage";
 import ContestPage from "./Components/ContestPage/ContestPage";
+import UserProfilePage from "./Components/UserProfilePage/UserProfilePage";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/samplecontest",
     element: <ContestPage />,
+  },
+  {
+    path: "/user",
+    element: <UserProfilePage />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));

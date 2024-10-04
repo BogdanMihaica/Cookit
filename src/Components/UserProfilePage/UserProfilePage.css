@@ -1,0 +1,100 @@
+.user-profile-container {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 2rem;
+  color: #333;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .user-profile-container {
+    margin-top: 12rem;
+  }
+}
+.user-profile-square {
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto 2rem;
+}
+
+.user-profile-image {
+  width: 100%;
+  height: auto;
+}
+
+.user-profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.user-profile-name {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.user-profile-message-button {
+  background-color: #900;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.user-profile-message-button:hover {
+  background-color: #b00;
+}
+
+.user-profile-awards,
+.user-profile-rank {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.user-profile-awards-title,
+.user-profile-rank-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 0.5rem;
+}
+
+.user-profile-award-item,
+.user-profile-rank-value {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.user-profile-recipes-section {
+  margin-top: 3rem;
+}
+
+.user-profile-recipes-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin: 1rem 0;
+}
+
+.user-profile-recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
