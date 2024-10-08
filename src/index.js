@@ -12,6 +12,10 @@ import { Contests } from "./Components/Contests/Contests";
 import RecipePage from "./Components/RecipePage/RecipePage";
 import ContestPage from "./Components/ContestPage/ContestPage";
 import UserProfilePage from "./Components/UserProfilePage/UserProfilePage";
+import ProfileSettingsPage from "./Components/ProfileSettingsPage/ProfileSettingsPage";
+import CookingTechniques from "./Components/CookingTechniques/CookingTechinques";
+import FactOfTheDay from "./Components/FactOfTheDay/FactOfTheDay";
+import IngredientsPage from "./Components/IngredientsPage/IngredientsPage";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +39,18 @@ const router = createBrowserRouter([
     element: <Contests />,
   },
   {
+    path: "/techniques",
+    element: <CookingTechniques />,
+  },
+  {
+    path: "/fact",
+    element: <FactOfTheDay />,
+  },
+  {
+    path: "/ingredients",
+    element: <IngredientsPage />,
+  },
+  {
     path: "/sample",
     element: <RecipePage />,
   },
@@ -45,6 +61,10 @@ const router = createBrowserRouter([
   {
     path: "/user",
     element: <UserProfilePage />,
+  },
+  {
+    path: "/settings",
+    element: <ProfileSettingsPage />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));

@@ -50,13 +50,13 @@ export const Navbar = () => {
                 <a href="/contests">Contests</a>
               </li>
               <li>
-                <a href="/">Cooking techniques</a>
+                <a href="/techniques">Cooking techniques</a>
               </li>
               <li>
-                <a href="/">Facts</a>
+                <a href="/fact">Fact of the day</a>
               </li>
               <li>
-                <a href="/">Ingredients</a>
+                <a href="/ingredients">Ingredients</a>
               </li>
             </ul>
           </li>

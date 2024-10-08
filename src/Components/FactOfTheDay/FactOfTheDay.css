@@ -1,0 +1,29 @@
+.fact-container {
+  margin-top: 7rem;
+  padding: 2rem;
+  background-color: rgb(239, 239, 239);
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.fact-title {
+  font-size: 3rem;
+  color: rgb(0, 0, 0);
+}
+
+.fact-description {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .fact-container {
+    margin-top: 10rem;
+  }
+}
