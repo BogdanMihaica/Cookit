@@ -1,0 +1,8 @@
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 0000   # Set your root password here
+      MYSQL_DATABASE: cookit_db                  # Optional: create a database
+    ports:
+      - "3307:3306"
