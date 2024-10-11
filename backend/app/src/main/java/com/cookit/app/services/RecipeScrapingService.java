@@ -8,15 +8,13 @@ import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.concurrent.CompletableFuture;
 
 @Service
 public class RecipeScrapingService {
 
-    public List<String> urls = List.of("https://www.simplyrecipes.com/recipes-5090746", "https://www.bbcgoodfood.com/recipes");
+    public List<String> urls = List.of("https://www.simplyrecipes.com/recipes-5090746");
 
     public Set<RecipeModelResponse> scrapeRecipes() {
         Set<RecipeModelResponse> recipes = new HashSet<>();
@@ -24,41 +22,44 @@ public class RecipeScrapingService {
             System.out.println(url);
             if (url.contains("simply")) {
                 extractFromSimply(recipes, url);
-            } else if (url.contains("bbcgoodfood")) {
-                extractFromBbcGoodFood(recipes, url);
             }
         }
         return recipes;
     }
 
-    private void simplyExtractRecipeUrls(List<String> recipeUrls, String link) {
-        try {
-            Document document = Jsoup.connect(link).get();
-            Element recipesContainer = document.getElementById("mntl-taxonomysc-article-list_1-0");
-            if (recipesContainer != null) {
-                Elements recipes = recipesContainer.getElementsByTag("a");
-                for (Element anchor : recipes) {
-                    Element footerDiv = anchor.selectFirst("div.card__footer:not(:empty)");
-                    if (footerDiv != null) {
-                        recipeUrls.add(anchor.attr("href"));
+    private CompletableFuture<List<String>> simplyExtractRecipeUrls(String link) {
+        return CompletableFuture.supplyAsync(() -> {
+            List<String> recipeUrls = new ArrayList<>();
+            try {
+                Document document = Jsoup.connect(link).get();
+                Element recipesContainer = document.getElementById("mntl-taxonomysc-article-list_1-0");
+                if (recipesContainer != null) {
+                    Elements recipes = recipesContainer.getElementsByTag("a");
+                    for (Element anchor : recipes) {
+                        Element footerDiv = anchor.selectFirst("div.card__footer:not(:empty)");
+                        if (footerDiv != null) {
+                            recipeUrls.add(anchor.attr("href"));
+                        }
                     }
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            return recipeUrls;
+        });
     }
+
 
     private void extractDetailsOfSimplyRecipe(RecipeModelResponse response, String url) {
         try {
             Document document = Jsoup.connect(url).get();
             Element article = document.getElementById("article--structured-project_1-0");
-            if (article == null) return; // Early return if article is null
+            if (article == null) return;
 
 
             Element categoryList = article.getElementById("breadcrumbs__list_1-0");
             String category = (categoryList != null && categoryList.getAllElements().size() > 1)
-                    ? categoryList.getAllElements().get(1).text()
+                    ? categoryList.getAllElements().get(categoryList.getAllElements().size()-1).text()
                     : null;
             // Handle image URL extraction safely
             String imgUrl = article.getElementsByClass("primary-image__image").first() != null
@@ -66,46 +67,54 @@ public class RecipeScrapingService {
                     : null;
 
             Element ingredientsList = article.getElementsByClass("structured-ingredients__list").first();
-            Element stepsList = article.getElementById("structured-project__steps_1-0").getElementsByTag("ol").first();
+            Element stepsList = article.getElementById("structured-project__steps_1-0").children().first();
             StringBuilder ingredients = new StringBuilder();
             StringBuilder steps = new StringBuilder();
 
 
             if (ingredientsList != null) {
-                for (Element listElement : ingredientsList.getAllElements()) {
+                for (Element listElement : ingredientsList.children()) {
                     ingredients.append(listElement.text()).append("|");
                 }
             }
 
             int i = 1;
             if (stepsList != null) {
-                for (Element step : stepsList.getAllElements()) {
-                    steps.append(i).append(". ").append(step.text()).append("|");
+                for (Element step : stepsList.children()) {
+                    StringBuilder liStep = new StringBuilder();
+                    steps.append(i).append(". ");
+                    for(Element li : step.children())
+                    {
+                        if(!Objects.equals(li.tagName(), "figure"))
+                            liStep.append(li.text());
+                    }
+                    steps.append(liStep);
+                    steps.append("|");
                     i++;
                 }
             }
 
 
             String title = article.getElementsByClass("heading__title").size() > 0
-                    ? article.getElementsByClass("heading__title").get(0).text()
+                    ? article.getElementsByClass("heading__title").first().text()
                     : null;
             String description = article.getElementsByClass("heading__subtitle").size() > 0
-                    ? article.getElementsByClass("heading__subtitle").get(0).text()
+                    ? article.getElementsByClass("heading__subtitle").first().text()
                     : null;
             String servings = article.getElementsByClass("project-meta__recipe-serving").size() > 0
-                    ? article.getElementsByClass("project-meta__recipe-serving").get(0)
+                    ? article.getElementsByClass("project-meta__recipe-serving").first()
                     .getElementsByTag("span").size() > 1
-                    ? article.getElementsByClass("project-meta__recipe-serving").get(0)
-                    .getElementsByTag("span").get(0)
-                    .getElementsByTag("span").get(1).text()
+                    ? article.getElementsByClass("project-meta__recipe-serving").first()
+                    .getElementsByTag("span").first()
+                    .getElementsByTag("span").last().text()
                     : "0"
                     : "0";
             String preparationTime = article.getElementsByClass("project-meta__total-time").size() > 0
-                    ? article.getElementsByClass("project-meta__total-time").get(0)
+                    ? article.getElementsByClass("project-meta__total-time").first()
                     .getElementsByTag("span").size() > 1
-                    ? article.getElementsByClass("project-meta__total-time").get(0)
-                    .getElementsByTag("span").get(0)
-                    .getElementsByTag("span").get(1).text()
+                    ? article.getElementsByClass("project-meta__total-time").first()
+                    .getElementsByTag("span").first()
+                    .getElementsByTag("span").last().text()
                     : "0"
                     : "0";
 
@@ -132,31 +141,48 @@ public class RecipeScrapingService {
 
     private void extractFromSimply(Set<RecipeModelResponse> recipes, String url) {
         try {
-            List<String> recipeUrls = new ArrayList<>();
+            List<CompletableFuture<List<String>>> futureRecipeUrls = new ArrayList<>();
             Document document = Jsoup.connect(url).get();
             Element elementContainer = document.getElementsByClass("mntl-taxonomysc-child-block__links").first();
             if (elementContainer != null) {
                 Elements anchors = elementContainer.getElementsByTag("a");
                 for (Element element : anchors) {
                     String categoryLink = element.attr("href");
-                    simplyExtractRecipeUrls(recipeUrls, categoryLink);
+                    futureRecipeUrls.add(simplyExtractRecipeUrls(categoryLink));
                 }
             }
-            // At this point recipeUrls is filled with all the simply recipe list
-            for (String recipeUrl : recipeUrls) {
-                RecipeModelResponse response = new RecipeModelResponse();
-                extractDetailsOfSimplyRecipe(response, recipeUrl);
-                // Only add if the response contains valid data
-                if (response.getTitle() != null) {
-                    recipes.add(response);
+            CompletableFuture<Void> allFutures = CompletableFuture.allOf(
+                    futureRecipeUrls.toArray(new CompletableFuture[0])
+            );
+
+            allFutures.thenAccept(v -> {
+                List<String> recipeUrls = new ArrayList<>();
+                futureRecipeUrls.forEach(future -> {
+                    try {
+                        recipeUrls.addAll(future.get());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+
+                List<CompletableFuture<Void>> futures = new ArrayList<>();
+                for (String recipeUrl : recipeUrls) {
+                    futures.add(CompletableFuture.runAsync(() -> {
+                        RecipeModelResponse response = new RecipeModelResponse();
+                        extractDetailsOfSimplyRecipe(response, recipeUrl);
+
+                        if (response.getTitle() != null) {
+                            synchronized (recipes) {
+                                recipes.add(response);
+                            }
+                        }
+                    }));
                 }
-            }
+                CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
+            }).join();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private void extractFromBbcGoodFood(Set<RecipeModelResponse> recipes, String url) {
-        // Implementation for BBC Good Food if needed
-    }
 }
