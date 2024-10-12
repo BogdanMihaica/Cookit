@@ -18,11 +18,7 @@ public class Ingredient {
     @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 
-    @Column(name = "photo_url")
+    @Column(name = "photo_url", columnDefinition = "TEXT")
     private String photoUrl;
-
-    @Column(name = "type")
-    private String type;
-
 
 }

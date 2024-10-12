@@ -14,7 +14,7 @@ public class Recipe {
 
     @ManyToOne
     @JoinColumn(name = "author_id", nullable = false)
-    private User author;
+    private User authorId;
 
     @Column(name = "title", nullable = false, length = 255)
     private String title;
@@ -22,7 +22,7 @@ public class Recipe {
     @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 
-    @Column(name = "photo", length = 255)
+    @Column(name = "photo", columnDefinition = "TEXT")
     private String photo;
 
     @Column(name = "ingredients", columnDefinition = "TEXT")
@@ -31,13 +31,15 @@ public class Recipe {
     @Column(name = "rating")
     private Integer rating;
 
-    @Column(name ="category", length=20)
+    @Column(name ="category", length=50)
     private String category;
+
     @Column(name = "preparation_time", length = 50)
     private String preparationTime;
 
-    @Column(name = "serves")
-    private Integer serves;
+    @Column(name = "servings")
+    private String servings;
 
-
+    @Column(name = "how_to_cook",columnDefinition = "TEXT")
+    private String howToCook;
 }

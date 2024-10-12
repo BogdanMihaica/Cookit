@@ -21,4 +21,6 @@ public class Contest {
     @Column(name = "imageUrl")
     private String imageUrl;
 
+    @Column(name = "deadline", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private java.sql.Timestamp deadline;
 }
