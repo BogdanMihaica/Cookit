@@ -23,7 +23,6 @@ export const Popup = ({ isOpen, onClose }) => {
           <a href="#" className="forgot-password">
             Forgot Password?
           </a>
-          {/* Use Link instead of a */}
           <Link to="/register" className="sign-up">
             Don't have an account?
           </Link>

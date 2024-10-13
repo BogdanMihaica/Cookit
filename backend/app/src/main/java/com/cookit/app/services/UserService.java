@@ -24,12 +24,10 @@ public class UserService {
         return userRepository.findById(id);
     }
 
-    // Get all users
     public List<User> findAll() {
         return userRepository.findAll();
     }
 
-    // Update an existing user
     public User updateUser(Integer id, User userDetails) {
         User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
         user.setUsername(userDetails.getUsername());
