@@ -51,7 +51,7 @@ const router = createBrowserRouter([
     element: <IngredientsPage />,
   },
   {
-    path: "/sample",
+    path: "/recipes/:param",
     element: <RecipePage />,
   },
   {
@@ -59,7 +59,11 @@ const router = createBrowserRouter([
     element: <ContestPage />,
   },
   {
-    path: "/user",
+    path: "/profile",
+    element: <UserProfilePage />,
+  },
+  {
+    path: "/user/:username",
     element: <UserProfilePage />,
   },
   {

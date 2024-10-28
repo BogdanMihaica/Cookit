@@ -37,7 +37,7 @@ public class Recipe {
     @Column(name = "preparation_time", length = 50)
     private String preparationTime;
 
-    @Column(name = "servings")
+    @Column(name = "serves")
     private String servings;
 
     @Column(name = "how_to_cook",columnDefinition = "TEXT")

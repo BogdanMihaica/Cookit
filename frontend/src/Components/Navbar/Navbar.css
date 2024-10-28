@@ -348,3 +348,36 @@
     font-size: 15px;
   }
 }
+#searchSuggestions {
+  position: absolute;
+  top: 50px; /* Position below the search bar */
+  left: 0;
+  right: 0; /* Full width to match the search bar */
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  z-index: 1000; /* Ensure it appears above other elements */
+  max-height: 200px; /* Limit height for overflow */
+  overflow-y: auto; /* Scroll if there are too many suggestions */
+  display: none; /* Initially hidden */
+}
+
+#searchSuggestions.active {
+  display: block; /* Show when active */
+}
+
+.suggestion-item {
+  padding: 10px 15px; /* Padding for clickable area */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  color: #333; /* Dark text color on hover */
+}
+
+.suggestion-item.active {
+  background-color: #e0e0e0; /* Slightly darker background for active suggestion */
+  font-weight: bold; /* Highlight active suggestion */
+}

@@ -1,12 +1,13 @@
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
-
+import logo from "./../../../src/logo.png";
 import { Popup } from "./Login";
 
 export const Navbar = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
+  const jwtToken = sessionStorage.getItem("jwt"); // Check for JWT in session storage
 
   const togglePopup = () => {
     setPopupOpen(!isPopupOpen);
@@ -17,8 +18,7 @@ export const Navbar = () => {
       <div id="cssmenu">
         <div className="logo">
           <a href="/">
-            {/* Anchor to homepage */}
-            <img src="logo.png" alt="Logo" />
+            <img src={logo} alt="Logo" />
           </a>
         </div>
         <div id="searchBarContainer">
@@ -64,8 +64,11 @@ export const Navbar = () => {
             <a href="/contact">Contact</a>
           </li>
           <li className="sign">
-            <a href="#" onClick={togglePopup}>
-              Sign in/up
+            <a
+              href={jwtToken ? "/profile" : "#"}
+              onClick={jwtToken ? undefined : togglePopup}
+            >
+              {jwtToken ? "Profile" : "Sign in/up"}
             </a>
           </li>
         </ul>
@@ -74,5 +77,3 @@ export const Navbar = () => {
     </div>
   );
 };
-
-// Popup Component

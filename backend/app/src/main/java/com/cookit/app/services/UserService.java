@@ -18,7 +18,9 @@ public class UserService {
     public User saveUser(User user) {
         return userRepository.save(user);
     }
-
+    public Optional<User> findByUsername(String username) {
+        return userRepository.findByUsername(username); // Assuming you have this method in your UserRepository
+    }
     // Get a user by ID
     public Optional<User> findById(Integer id) {
         return userRepository.findById(id);

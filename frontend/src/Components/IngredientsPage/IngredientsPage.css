@@ -48,8 +48,62 @@
   font-size: 1.2rem;
   color: #555;
 }
+.ingredient-item img {
+  width: 200px;
+}
+.search-bar {
+  width: 80%;
+  max-width: 500px; /* Limit maximum width */
+  padding: 0.8rem 1rem; /* Add some padding */
+  margin: 2rem auto; /* Center horizontally with top and bottom margins */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1.2rem; /* Font size for better readability */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for interactions */
+}
+
+.search-bar:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #b22222; /* Velvet red border on focus */
+  box-shadow: 0 0 5px rgba(178, 34, 34, 0.5); /* Shadow on focus */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center; /* Center items */
+  align-items: center;
+  margin-top: 1rem; /* Margin above pagination */
+}
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pagination button {
+  padding: 0.5rem 1rem; /* Padding for buttons */
+  margin: 0 0.5rem; /* Margin between buttons */
+  cursor: pointer; /* Pointer cursor for interaction */
+  background-color: #b22222; /* Velvet red background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.pagination button:hover {
+  background-color: #a81e1e; /* Darker red on hover */
+}
+
+.pagination span {
+  font-size: 1.2rem; /* Font size for pagination text */
+  margin: 0 1rem; /* Margin around text */
+}
 
 @media (max-width: 768px) {
+  .search-bar {
+    width: 80%;
+  }
   .ingredients-container {
     margin-top: 12rem;
   }
