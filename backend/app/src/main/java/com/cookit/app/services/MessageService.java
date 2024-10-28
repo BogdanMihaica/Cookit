@@ -1,8 +1,9 @@
 package com.cookit.app.services;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-@Repository
+@Service
 
-public class MessageRepository {
+public class MessageService {
 }

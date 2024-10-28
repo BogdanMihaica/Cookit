@@ -1,2 +1,4 @@
-package com.cookit.app.controllers;public class MessageController {
+package com.cookit.app.controllers;
+
+public class MessageController {
 }

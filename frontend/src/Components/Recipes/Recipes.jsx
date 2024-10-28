@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import beefWellington from "../../Home-food/beefwellington.webp";
 import salmon from "../../Home-food/salmonpizza.jpg";
 import cheese from "../../Home-food/cheesesouffle.jpg";
@@ -14,146 +14,59 @@ const sampleRecipes = [
     title: "Beef Wellington",
     duration: "1 hour",
     description: "Delicious beef wrapped in pastry.",
+    category: "Dinner",
   },
   {
     imgUrl: salmon,
     title: "Salmon Pizza",
     duration: "30 mins",
     description: "Tasty salmon pizza with fresh ingredients.",
+    category: "Lunch",
   },
   {
     imgUrl: cheese,
     title: "Cheese Souffle",
     duration: "45 mins",
     description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
-  },
-  {
-    imgUrl: cheese,
-    title: "Cheese Souffle",
-    duration: "45 mins",
-    description: "Fluffy and cheesy soufflé.",
+    category: "Dessert",
   },
 ];
 
 const Recipes = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(0);
   const recipesPerPage = 12;
-  const categories = [
-    "Appetizer",
-    "Asian",
-    "Baked Good",
-    "Bread",
-    "Brunch",
-    "Cake",
-    "Cocktail",
-    "Condiment",
-    "Dessert",
-    "Drink",
-    "Easy Recipe",
-    "Frozen Dessert",
-    "Grain",
-    "Healthy Recipe",
-    "Holiday Recipe",
-    "Instant Pot Recipe",
-    "International Cuisine",
-    "Italian",
-    "Main Course",
-    "Meat",
-    "Mediterranean",
-    "Mexican",
-    "Non-Alcoholic Beverage",
-    "One-Pot Meal",
-    "Pasta",
-    "Pie",
-    "Poultry",
-    "Quick Recipe",
-    "Salad",
-    "Sauce",
-    "Seafood",
-    "Side Dish",
-    "Slow Cooker Recipe",
-    "Smoothie",
-    "Snack",
-    "Special Occasion Recipe",
-    "Stew",
-    "Vegetarian",
-    "Vegan",
-  ];
+  const [recipes, setRecipes] = useState([]);
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8090/api/recipes")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Recipes:", data);
+        setRecipes(Array.from(new Set(data)));
+        setCategories(
+          Array.from(new Set(data.map((recipe) => recipe.category))).sort()
+        );
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+  }, []);
+
   const handleCategoryChange = (category) => {
-    setSelectedCategories((prevCategories) => {
-      if (prevCategories.includes(category)) {
-        return prevCategories.filter((c) => c !== category); // Remove category if already selected
-      } else {
-        return [...prevCategories, category]; // Add category if not selected
-      }
-    });
+    setSelectedCategories(
+      (prevCategories) =>
+        prevCategories.includes(category)
+          ? prevCategories.filter((c) => c !== category) // Remove category if already selected
+          : [...prevCategories, category] // Add category if not selected
+    );
   };
 
   const handleNextPage = () => {
@@ -166,7 +79,17 @@ const Recipes = () => {
     }
   };
 
-  const displayedRecipes = sampleRecipes.slice(
+  const filteredRecipes = recipes.filter((recipe) => {
+    const matchesSearch = recipe.title
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+    const matchesCategory =
+      selectedCategories.length === 0 ||
+      selectedCategories.includes(recipe.category);
+    return matchesSearch && matchesCategory;
+  });
+
+  const displayedRecipes = filteredRecipes.slice(
     currentPage * recipesPerPage,
     (currentPage + 1) * recipesPerPage
   );
@@ -181,10 +104,9 @@ const Recipes = () => {
             type="text"
             placeholder="Search for a specific recipe"
             className="search-bar"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button className="search-button">
-            <FontAwesomeIcon icon={faSearch} className="search-icon" />
-          </button>
         </div>
 
         <div className="category-buttons">
@@ -203,7 +125,12 @@ const Recipes = () => {
         <div className="recipes-container">
           <div className="recipes-list">
             {displayedRecipes.map((recipe, index) => (
-              <Recipe key={index} {...recipe} />
+              <Recipe
+                key={index}
+                {...recipe}
+                imgUrl={recipe.photo}
+                duration={recipe.preparationTime}
+              />
             ))}
           </div>
           <div className="pagination">

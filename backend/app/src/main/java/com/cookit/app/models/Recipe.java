@@ -12,9 +12,9 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "author_id", nullable = false)
-    private User authorId;
+
+    @Column(name = "author_id", nullable = false)
+    private Integer authorId;
 
     @Column(name = "title", nullable = false, length = 255)
     private String title;

@@ -1,2 +1,7 @@
-package com.cookit.app.controllers;public class ChatController {
+package com.cookit.app.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ChatController {
 }
