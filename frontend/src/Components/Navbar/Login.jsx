@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 export const Popup = ({ isOpen, onClose }) => {
   const [credentials, setCredentials] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
@@ -40,8 +40,13 @@ export const Popup = ({ isOpen, onClose }) => {
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Email:</label>
-            <input type="email" name="email" required onChange={handleChange} />
+            <label>Username:</label>
+            <input
+              type="text"
+              name="username"
+              required
+              onChange={handleChange}
+            />
           </div>
           <div>
             <label>Password:</label>

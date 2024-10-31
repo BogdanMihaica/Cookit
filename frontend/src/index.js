@@ -16,6 +16,7 @@ import ProfileSettingsPage from "./Components/ProfileSettingsPage/ProfileSetting
 import CookingTechniques from "./Components/CookingTechniques/CookingTechinques";
 import FactOfTheDay from "./Components/FactOfTheDay/FactOfTheDay";
 import IngredientsPage from "./Components/IngredientsPage/IngredientsPage";
+import RecipeUploadForm from "./Components/RecipeUploadForm/RecipeUploadForm";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
     element: <RecipePage />,
   },
   {
+    path: "/upload",
+    element: <RecipeUploadForm />,
+  },
+  {
     path: "/samplecontest",
     element: <ContestPage />,
   },
@@ -63,7 +68,7 @@ const router = createBrowserRouter([
     element: <UserProfilePage />,
   },
   {
-    path: "/user/:username",
+    path: "/user/:usernameParam",
     element: <UserProfilePage />,
   },
   {

@@ -24,6 +24,9 @@ public class Message {
     @Column(name = "chat_id", nullable = false)
     private Integer chatId;
 
+    @Column(nullable = false, columnDefinition = "BOOLEAN default 0")
+    private Boolean seen;
+
     @Column(name = "sent_on", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private java.sql.Timestamp sentOn;
 

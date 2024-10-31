@@ -7,12 +7,51 @@ import { Recipe } from "../Recipe/Recipe";
 import { Navbar } from "../Navbar/Navbar";
 
 const UserProfilePage = () => {
-  const { username } = useParams();
+  const { usernameParam } = useParams();
   const [userData, setUserData] = useState(null);
-  function replaceSpaces(str) {
-    //return str.replace(/-/g, " ");
-    return str;
-  }
+  const [userRecipes, setUserRecipes] = useState([]);
+  const [username, setUserName] = useState("");
+  const recipesPerPage = 4;
+  const [currentPage, setCurrentPage] = useState(0);
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 0) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
+  };
+
+  useEffect(() => {
+    if (userData != null) {
+      const fetchUserRecipes = async () => {
+        fetch("http://localhost:8090/api/recipes")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            setUserRecipes(
+              data.filter((recipe) => recipe.authorId === userData.id)
+            );
+          })
+
+          .catch((error) => {
+            console.error(
+              "There was a problem with the fetch operation:",
+              error
+            );
+          });
+      };
+      fetchUserRecipes();
+    }
+  }, [userData]);
+  useEffect(() => {
+    console.log(userRecipes);
+  }, [userRecipes]);
   useEffect(() => {
     const fetchData = async () => {
       let userId;
@@ -22,9 +61,9 @@ const UserProfilePage = () => {
         const payload = JSON.parse(atob(token.split(".")[1]));
         userId = payload.sub;
       }
-
-      const url = username
-        ? `http://localhost:8090/users/username/${replaceSpaces(username)}`
+      console.log(userId);
+      const url = usernameParam
+        ? `http://localhost:8090/users/username/${usernameParam}`
         : `http://localhost:8090/users/username/${userId}`;
 
       const response = await fetch(url);
@@ -37,10 +76,13 @@ const UserProfilePage = () => {
     };
 
     fetchData();
-  }, [username]);
+  }, [usernameParam]);
 
   if (!userData) return <div>Loading...</div>; // Show a loading state
-
+  const displayedRecipes = userRecipes.slice(
+    currentPage * recipesPerPage,
+    (currentPage + 1) * recipesPerPage
+  );
   return (
     <>
       <Navbar />
@@ -54,12 +96,14 @@ const UserProfilePage = () => {
         </div>
         <div className="user-profile-header">
           <h2 className="user-profile-name">{userData.username}</h2>
-          <button className="user-profile-message-button">
-            <FontAwesomeIcon
-              icon={faComment}
-              className="user-profile-message-icon"
-            />
-          </button>
+          {usernameParam || usernameParam !== userData.username ? (
+            <button className="user-profile-message-button">
+              <FontAwesomeIcon
+                icon={faComment}
+                className="user-profile-message-icon"
+              />
+            </button>
+          ) : null}
         </div>
 
         <div className="user-profile-awards">
@@ -76,7 +120,27 @@ const UserProfilePage = () => {
           {userData.username}'s Recipes:
         </h3>
         <div className="user-profile-recipes-container">
-          {/* Replace this with actual recipe data if available */}
+          <div className="recipes-list">
+            {displayedRecipes.map((recipe, index) => (
+              <Recipe
+                key={index}
+                {...recipe}
+                imgUrl={recipe.photo}
+                duration={recipe.preparationTime}
+              />
+            ))}
+          </div>
+          <div className="pagination">
+            <button onClick={handlePreviousPage} disabled={currentPage === 0}>
+              Previous
+            </button>
+            <button
+              onClick={handleNextPage}
+              disabled={displayedRecipes.length < recipesPerPage}
+            >
+              Next
+            </button>
+          </div>
         </div>
       </div>
     </>

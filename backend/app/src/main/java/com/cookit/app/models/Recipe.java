@@ -29,7 +29,7 @@ public class Recipe {
     private String ingredients;
 
     @Column(name = "rating")
-    private Integer rating;
+    private Float rating;
 
     @Column(name ="category", length=50)
     private String category;
@@ -42,4 +42,7 @@ public class Recipe {
 
     @Column(name = "how_to_cook",columnDefinition = "TEXT")
     private String howToCook;
+
+    @Column(name = "status", columnDefinition = "BOOLEAN DEFAULT 1")
+    private Boolean status;
 }

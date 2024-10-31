@@ -1,13 +1,11 @@
 package com.cookit.app.controllers;
 
+import com.cookit.app.dtos.UpdateRecipeRequest;
 import com.cookit.app.models.Recipe;
 import com.cookit.app.models.RecipeModelResponse;
 import com.cookit.app.models.ScrapingReminder;
 import com.cookit.app.models.User;
-import com.cookit.app.services.RecipeScrapingService;
-import com.cookit.app.services.RecipeService;
-import com.cookit.app.services.ScrapingReminderService;
-import com.cookit.app.services.UserService;
+import com.cookit.app.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
@@ -30,9 +28,11 @@ public class RecipeController {
     private RecipeScrapingService recipeScrapingService;
     @Autowired
     private RecipeService recipeService;
-
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private ReviewService reviewService;
     @Autowired
     private ScrapingReminderService scrapingReminderService;
 
@@ -52,7 +52,7 @@ public class RecipeController {
             Recipe recipe=new Recipe();
             recipe.setTitle(recipeResponse.getTitle());
             recipe.setDescription(recipeResponse.getDescription());
-            recipe.setRating(0);
+            recipe.setRating(0f);
             recipe.setCategory(recipeResponse.getCategory());
             recipe.setIngredients(recipeResponse.getIngredients());
             recipe.setAuthorId(author.getId());
@@ -103,5 +103,11 @@ public class RecipeController {
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Unauthorized access");
         }
+    }
+
+    @PutMapping("/api/recipes")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public Recipe updateRecipe(@RequestBody UpdateRecipeRequest request) {
+        return recipeService.updateRecipe(request.getId(), request.getValue());
     }
 }

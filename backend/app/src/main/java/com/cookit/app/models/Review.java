@@ -15,11 +15,15 @@ public class Review {
     @Column(name = "author_id", nullable = false)
     private Integer authorId;
 
+    @Column(name = "author_username")
+    private String authorUsername;
+
     @Column(name = "recipe_id", nullable = false)
     private Integer recipeId;
 
     @Column(name = "text", columnDefinition = "TEXT")
     private String text;
 
-
+    @Column(name="stars")
+    private Integer value;
 }

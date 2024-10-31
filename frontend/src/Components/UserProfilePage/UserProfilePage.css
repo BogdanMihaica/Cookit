@@ -15,8 +15,9 @@
 .user-profile-square {
   width: 150px;
   height: 150px;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 8px;
+  border-top: 5px ridge rgb(0, 0, 0);
+  border-bottom: 10px groove #490000;
+  border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 2rem;
 }

@@ -49,7 +49,6 @@ const Recipes = () => {
         return response.json();
       })
       .then((data) => {
-        console.log("Recipes:", data);
         setRecipes(Array.from(new Set(data)));
         setCategories(
           Array.from(new Set(data.map((recipe) => recipe.category))).sort()
@@ -124,14 +123,16 @@ const Recipes = () => {
         </div>
         <div className="recipes-container">
           <div className="recipes-list">
-            {displayedRecipes.map((recipe, index) => (
-              <Recipe
-                key={index}
-                {...recipe}
-                imgUrl={recipe.photo}
-                duration={recipe.preparationTime}
-              />
-            ))}
+            {displayedRecipes
+              .filter((recipe, index) => recipe.status === true)
+              .map((recipe, index) => (
+                <Recipe
+                  key={index}
+                  {...recipe}
+                  imgUrl={recipe.photo}
+                  duration={recipe.preparationTime}
+                />
+              ))}
           </div>
           <div className="pagination">
             <button onClick={handlePreviousPage} disabled={currentPage === 0}>
