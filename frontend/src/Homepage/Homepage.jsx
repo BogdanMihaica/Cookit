@@ -10,8 +10,10 @@ import cheese from "../Home-food/cheesesouffle.jpg";
 import { Recipe } from "../Components/Recipe/Recipe";
 import Footer from "../Components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
-import { Popup } from "../Components/Navbar/Login";
+
 import { useState } from "react";
+import { Popup } from "../Components/Authentication/Login/Login";
+import { MessageSidebar } from "../Components/MessageSidebar/MessageSidebar";
 export default function Homepage() {
   const [isPopupOpen, setPopupOpen] = useState(false);
 
@@ -22,6 +24,7 @@ export default function Homepage() {
   return (
     <>
       <Navbar />
+
       <div className="homepage-container">
         <div className="section-one">
           <div className="home-login-info">

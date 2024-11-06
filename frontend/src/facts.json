@@ -1,0 +1,972 @@
+{
+  "food_facts": [
+    { "fact": "Avocados are actually fruits, not vegetables!" },
+    {
+      "fact": "Carrots were originally purple, but the orange variety was cultivated in the 17th century by Dutch growers."
+    },
+    {
+      "fact": "Honey never spoils, and archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old."
+    },
+    {
+      "fact": "Tomatoes were once believed to be poisonous and were grown mainly as ornamental plants in Europe."
+    },
+    { "fact": "Bananas are technically berries, while strawberries are not." },
+    {
+      "fact": "The world's most expensive coffee, Kopi Luwak, is made from beans that have been eaten and then excreted by civet cats."
+    },
+    {
+      "fact": "Garlic was used as a natural remedy for various health issues in ancient civilizations, from the Egyptians to the Greeks."
+    },
+    {
+      "fact": "The color of an egg’s shell depends on the breed of the hen, with white and brown eggs being the most common."
+    },
+    {
+      "fact": "Potatoes were the first vegetable grown in space on the Space Shuttle Columbia in 1995."
+    },
+    {
+      "fact": "Peanuts are not nuts—they're legumes, related to beans and lentils."
+    },
+    {
+      "fact": "The most expensive chocolate in the world is made from white truffles, costing over $2,000 per pound."
+    },
+    {
+      "fact": "The longest pizza ever made was over 1.5 miles long and was created in Rome in 2012."
+    },
+    { "fact": "Apples float in water because 25% of their volume is air." },
+    {
+      "fact": "Popcorn kernels can explode with a force of up to 3 feet into the air when heated."
+    },
+    {
+      "fact": "Cucumbers are 96% water, making them one of the most hydrating vegetables."
+    },
+    {
+      "fact": "In Japan, square watermelons are grown for easier storage and stacking."
+    },
+    {
+      "fact": "Chocolate was once used as currency by ancient Aztecs and Mayans."
+    },
+    {
+      "fact": "Peppers, both hot and sweet, are a member of the nightshade family, which includes tomatoes and potatoes."
+    },
+    {
+      "fact": "You can tell the age of an egg by placing it in a bowl of water: Fresh eggs sink, older eggs float."
+    },
+    {
+      "fact": "A watermelon is 92% water, and it is a member of the cucumber family."
+    },
+    {
+      "fact": "The world’s most expensive pizza costs $12,000 and is topped with caviar, lobster, and 24-karat gold."
+    },
+    {
+      "fact": "The original recipe for Caesar salad didn’t actually contain anchovies."
+    },
+    {
+      "fact": "Tuna is the fastest swimming fish, reaching speeds of up to 75 km/h (47 mph)."
+    },
+    {
+      "fact": "Eggplants are technically berries, but they’re treated as vegetables in cooking."
+    },
+    {
+      "fact": "Cilantro and coriander are the same plant, but cilantro refers to the leaves, and coriander refers to the seeds."
+    },
+    {
+      "fact": "In Italy, it’s illegal to make a ‘pizza Margherita’ with mozzarella other than buffalo mozzarella."
+    },
+    { "fact": "Cheese is the most stolen food in the world." },
+    {
+      "fact": "Bacon can be used as a flavor enhancer in everything from salads to desserts."
+    },
+    {
+      "fact": "Chili peppers get their heat from a compound called capsaicin."
+    },
+    {
+      "fact": "The pineapple is not a single fruit, but a collection of berries fused together."
+    },
+    {
+      "fact": "Cabbage can be used to relieve headaches when applied to the forehead in a compress."
+    },
+    { "fact": "Potatoes were the first food grown in space by NASA in 1995." },
+    {
+      "fact": "In medieval Europe, eating sugar was considered a sign of wealth."
+    },
+    {
+      "fact": "Tomatoes were first domesticated in South America by the ancient Aztecs."
+    },
+    {
+      "fact": "The world’s most expensive spice, vanilla, comes from an orchid that requires hand pollination."
+    },
+    {
+      "fact": "Eating too many carrots can turn your skin orange due to a condition called carotenemia."
+    },
+    {
+      "fact": "The Guinness World Record for the most cookies baked in one hour is 59,000."
+    },
+    {
+      "fact": "Kiwi fruit is native to China, but it was named after the national bird of New Zealand."
+    },
+    {
+      "fact": "Watermelons are a symbol of good luck in Japan, often given as gifts during summer festivals."
+    },
+    { "fact": "The average American eats about 18 acres of pizza each day!" },
+    {
+      "fact": "Caffeine can stay in your system for up to 12 hours after consumption."
+    },
+    {
+      "fact": "The world’s largest ice cream cone was nearly 10 feet tall and weighed over 2,000 pounds."
+    },
+    { "fact": "There are over 7,500 varieties of apples grown worldwide." },
+    { "fact": "The largest pumpkin ever grown weighed over 2,600 pounds." },
+    { "fact": "Vanilla is the only flavoring derived from an orchid." },
+    {
+      "fact": "Oysters are considered aphrodisiacs due to their high zinc content, which boosts libido."
+    },
+    {
+      "fact": "Strawberries are the only fruit that wear their seeds on the outside."
+    },
+    {
+      "fact": "The word ‘pasta’ comes from the Italian word ‘paste,’ meaning dough."
+    },
+    {
+      "fact": "Chocolate is a stimulant, with properties similar to caffeine."
+    },
+    {
+      "fact": "Coconut water can be used as a substitute for blood plasma in emergencies."
+    },
+    {
+      "fact": "The first recorded recipe for spaghetti is from the 12th century in the Middle East."
+    },
+    {
+      "fact": "The taste of food is mostly based on smell, which is why food tastes different when you have a cold."
+    },
+    {
+      "fact": "The longest time someone has survived without food is 382 days."
+    },
+    {
+      "fact": "A single coffee tree can produce up to 10 pounds of beans per year."
+    },
+    { "fact": "The longest sushi roll ever made was over 2,500 feet long." },
+    {
+      "fact": "Honeybees must visit 2 million flowers to make 1 pound of honey."
+    },
+    {
+      "fact": "Avocados are a superfood, rich in healthy fats, fiber, and vitamins."
+    },
+    {
+      "fact": "Caffeine is a natural pesticide and is believed to protect plants from insects."
+    },
+    {
+      "fact": "You can make your own homemade vanilla extract using vodka and vanilla beans."
+    },
+    {
+      "fact": "Garlic is a natural antibiotic and has been used for thousands of years to treat infections."
+    },
+    { "fact": "There are over 1,000 different types of cheese in the world." },
+    {
+      "fact": "The word ‘barbecue’ comes from the Taino word ‘barbacoa,’ which referred to a cooking method over an open fire."
+    },
+    {
+      "fact": "Blueberries are packed with antioxidants, making them one of the healthiest fruits you can eat."
+    },
+    { "fact": "There are more than 600 types of rice grown around the world." },
+    { "fact": "Peaches are a member of the rose family." },
+    {
+      "fact": "The average American eats about 100 pounds of potatoes every year."
+    },
+    { "fact": "One pound of grapes can yield about 60% of a bottle of wine." },
+    {
+      "fact": "In the 1800s, ketchup was sold as a medicine to treat digestive problems."
+    },
+    {
+      "fact": "Cherries are a member of the stone fruit family, along with peaches and plums."
+    },
+    {
+      "fact": "The first chocolate bar was invented in 1847 by Joseph Fry in England."
+    },
+    { "fact": "Grapes can be used to make both wine and raisins." },
+    {
+      "fact": "Chewing gum was invented by accident by a man named Thomas Adams in 1869."
+    },
+    {
+      "fact": "In some countries, it is considered bad luck to eat a banana in the evening."
+    },
+    { "fact": "The largest hamburger ever made weighed over 2,000 pounds." },
+    {
+      "fact": "Pineapple is the only fruit that contains the enzyme bromelain, which can break down protein."
+    },
+    { "fact": "Spinach is one of the best plant-based sources of iron." },
+    {
+      "fact": "Cucumbers are an excellent source of vitamin K, which helps with bone health."
+    },
+    { "fact": "Olives have been cultivated for over 6,000 years." },
+    {
+      "fact": "The most popular fruit in the world is the banana, with over 100 billion bananas consumed annually."
+    },
+    {
+      "fact": "Pomegranate juice has been linked to various health benefits, including lowering blood pressure."
+    },
+    {
+      "fact": "The word ‘dessert’ comes from the French word ‘desservir,’ meaning ‘to clear the table.’"
+    },
+    {
+      "fact": "Figs are considered one of the oldest cultivated fruits in history."
+    },
+    {
+      "fact": "Olive oil is an excellent moisturizer and is often used in beauty products."
+    },
+    {
+      "fact": "The average person will consume about 10 pounds of chocolate every year."
+    },
+    { "fact": "The word ‘taco’ means ‘light meal’ in Spanish." },
+    {
+      "fact": "Basil is a key ingredient in Italian pesto and is known for its fragrant, aromatic flavor."
+    },
+    {
+      "fact": "The banana is one of the oldest cultivated plants in the world, originating in Southeast Asia."
+    },
+    {
+      "fact": "Lemon juice is a natural cleaner and can be used to remove stains and odors."
+    },
+    { "fact": "The world’s largest bowl of guacamole weighed over 5 tons." },
+    {
+      "fact": "Garlic is a powerful natural antibiotic, and it’s been used for centuries to treat various health conditions."
+    },
+    { "fact": "Coconut oil can be used for cooking, skincare, and hair care." },
+    {
+      "fact": "Ice cream was once a luxury enjoyed only by the wealthy in ancient Rome."
+    },
+    {
+      "fact": "The world's largest coffee cup holds over 2,000 gallons of coffee."
+    },
+    {
+      "fact": "Oranges are not only delicious, but they are also packed with vitamin C, helping to boost your immune system."
+    },
+    {
+      "fact": "In Ancient Egypt, garlic was considered a sacred food and was used as both a remedy and an offering to the gods."
+    },
+    { "fact": "The longest lasagna ever made measured over 250 feet." },
+    { "fact": "Lemons contain more sugar than strawberries." },
+    {
+      "fact": "The average American eats around 20 pounds of candy each year."
+    },
+    {
+      "fact": "Hot dogs originated in Germany, but they became popular in the United States in the late 1800s."
+    },
+    { "fact": "The largest cabbage ever grown weighed over 130 pounds." },
+    {
+      "fact": "Tomatoes were once believed to be poisonous, but they were later discovered to be edible and delicious."
+    },
+    {
+      "fact": "Ginger is known for its anti-inflammatory properties and has been used for thousands of years as a natural remedy."
+    },
+    {
+      "fact": "The first commercial apple variety, the ‘Gravenstein,’ was cultivated in 1669."
+    },
+    { "fact": "Apples float because they are 25% air." },
+    { "fact": "The world’s largest apple pie weighed over 37,000 pounds." },
+    {
+      "fact": "Cucumbers are often mistaken for vegetables, but they are technically fruits."
+    },
+    { "fact": "Almonds are actually seeds, not nuts." },
+    {
+      "fact": "Figs are one of the oldest cultivated fruits, dating back to ancient Mesopotamia."
+    },
+    {
+      "fact": "The average person consumes more than 10 pounds of honey each year."
+    },
+    { "fact": "Grapes are used to make both wine and raisins." },
+    { "fact": "The world’s largest sushi roll was over 2,500 feet long." },
+    {
+      "fact": "Pineapples are made up of many individual berries fused together."
+    },
+    {
+      "fact": "Honeybees must visit 2 million flowers to make just one pound of honey."
+    },
+    {
+      "fact": "The world’s most expensive potato is a type of French truffle potato called ‘La Bonnotte.’"
+    },
+    {
+      "fact": "The average American eats around 130 pounds of potatoes per year."
+    },
+    {
+      "fact": "The human body contains more bacteria than human cells, and many of these bacteria live in the gut."
+    },
+    { "fact": "The longest toast ever made was over 100 feet long." },
+    {
+      "fact": "The world’s most expensive cheese is made from the milk of a rare breed of donkey in Serbia."
+    },
+    {
+      "fact": "The largest chocolate bar ever made weighed over 12,000 pounds."
+    },
+    {
+      "fact": "Cinnamon was once so valuable that it was used as a form of currency."
+    },
+    {
+      "fact": "Cucumbers can be used to reduce puffiness around the eyes due to their cooling effect."
+    },
+    { "fact": "Potatoes are the most widely consumed vegetable in the world." },
+    { "fact": "Olives are grown in more than 1,000 different varieties." },
+    {
+      "fact": "Gingerbread cookies originated in the 15th century and were often used for medicinal purposes."
+    },
+    {
+      "fact": "The world’s largest pizza was made in Rome in 2012, measuring over 1261 square meters."
+    },
+    {
+      "fact": "The word ‘cheese’ comes from the Latin word ‘caseus,’ which means ‘to ferment.’"
+    },
+    {
+      "fact": "The color of honey can range from light amber to dark brown depending on the type of flower the bees pollinate."
+    },
+    {
+      "fact": "The average person will consume around 20 pounds of pasta each year."
+    },
+    {
+      "fact": "The first recorded recipe for apple pie is from England in the 14th century."
+    },
+    {
+      "fact": "Cheese is made by curdling milk, separating the solids from the liquids."
+    },
+    { "fact": "The longest sandwich ever made was over 1,000 feet long." },
+    {
+      "fact": "Ice cream was invented by the Chinese during the Tang dynasty (618-907 AD)."
+    },
+    {
+      "fact": "Coconut water is a natural electrolyte and can be used to hydrate the body."
+    },
+    {
+      "fact": "Coffee was discovered in Ethiopia by a goat herder who noticed his goats became more energetic after eating coffee cherries."
+    },
+    { "fact": "The average American eats over 200 pounds of meat per year." },
+    {
+      "fact": "The world’s largest fruit salad contained over 3,000 pounds of fruit."
+    },
+    {
+      "fact": "The world’s largest chocolate chip cookie weighed over 40,000 pounds."
+    },
+    {
+      "fact": "Bacon is one of the most popular breakfast foods in the United States."
+    },
+    {
+      "fact": "In 2001, a pizza with gold flakes was made for a wealthy customer in the United Arab Emirates."
+    },
+    {
+      "fact": "Hot dogs were once referred to as ‘frankfurter sandwiches’ in the U.S."
+    },
+    { "fact": "The largest collection of coffee cups is over 10,000 mugs." },
+    {
+      "fact": "Peppers, both hot and sweet, are members of the Solanaceae family, also known as nightshades."
+    },
+    {
+      "fact": "Cucumbers contain a natural compound called cucurbitacin, which helps to reduce inflammation."
+    },
+    { "fact": "The word ‘mango’ comes from the Tamil word ‘māṅgā.’" },
+    {
+      "fact": "The world’s largest potato sculpture weighed over 3,000 pounds."
+    },
+    { "fact": "The oldest known recipe for bread comes from ancient Egypt." },
+    {
+      "fact": "Pomegranates have been grown in the Middle East for over 5,000 years."
+    },
+    { "fact": "A cherry is actually a drupe, a type of stone fruit." },
+    {
+      "fact": "Olive oil is rich in monounsaturated fats, which are heart-healthy."
+    },
+    {
+      "fact": "A watermelon is over 90% water, making it a great hydrating fruit."
+    },
+    { "fact": "The world’s most expensive vanilla is grown in Madagascar." },
+    {
+      "fact": "The first commercially produced ice cream cone was made in 1904."
+    },
+    {
+      "fact": "Cheese has been around for over 4,000 years, dating back to ancient Mesopotamia."
+    },
+    {
+      "fact": "Popcorn is one of the oldest snack foods, dating back to ancient civilizations in the Americas."
+    },
+    {
+      "fact": "Garlic is a natural insect repellent and has been used for centuries to ward off pests."
+    },
+    { "fact": "The longest carrot ever grown measured over 19 feet long." },
+    {
+      "fact": "Apple cider vinegar is often used as a natural remedy for various health problems, including sore throats."
+    },
+    { "fact": "In Japan, the peach is a symbol of good luck and prosperity." },
+    { "fact": "The largest omelet ever made weighed over 6,000 pounds." },
+    { "fact": "The word ‘pizza’ comes from the Italian word for ‘pie.’" },
+    {
+      "fact": "Cherries are rich in antioxidants, which can help reduce inflammation and improve heart health."
+    },
+    {
+      "fact": "In the 16th century, sugar was so expensive that it was often used to flavor meats."
+    },
+    {
+      "fact": "Potatoes can be stored in the ground for months and still stay fresh."
+    },
+    {
+      "fact": "Pineapples were once so rare and expensive in Europe that they were considered a status symbol."
+    },
+    {
+      "fact": "The world’s largest gingerbread house was built in Texas and measured over 21 feet tall."
+    },
+    {
+      "fact": "The first known use of the word 'pizza' dates back to the 10th century in southern Italy."
+    },
+    {
+      "fact": "Pineapples were once so valuable in Europe that they were rented out for display at fancy parties."
+    },
+    { "fact": "The world's largest popcorn ball weighed over 9,000 pounds." },
+    {
+      "fact": "The earliest recorded use of chocolate as a drink comes from the Mayan civilization, around 2,000 years ago."
+    },
+    {
+      "fact": "The Guinness World Record for the most tomatoes used in a single ketchup bottle is over 1,100."
+    },
+    {
+      "fact": "Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are still edible."
+    },
+    { "fact": "The average American eats about 50 pounds of fruit per year." },
+    {
+      "fact": "Almonds were originally native to the Middle East, but they are now grown in many parts of the world."
+    },
+    {
+      "fact": "Chili peppers were originally grown in South America and spread across the world after the Columbian exchange."
+    },
+    {
+      "fact": "The word ‘mayo’ is short for mayonnaise, which is named after the Spanish city of Mahón."
+    },
+    {
+      "fact": "Rice is the most widely consumed staple food for a large part of the world’s population."
+    },
+    {
+      "fact": "Tomatoes are actually a fruit, not a vegetable, according to botanical definitions."
+    },
+    {
+      "fact": "Olives are used to produce olive oil, a key ingredient in Mediterranean cooking."
+    },
+    { "fact": "The world’s largest ice cream cone weighed over 2,400 pounds." },
+    {
+      "fact": "The chocolate chip cookie was invented in the 1930s by Ruth Wakefield, who ran the Toll House Inn."
+    },
+    {
+      "fact": "In ancient Rome, garum, a fermented fish sauce, was a staple ingredient in many dishes."
+    },
+    {
+      "fact": "The world’s largest pancake was over 120 feet in diameter and weighed more than 6,000 pounds."
+    },
+    { "fact": "The longest ever line of sandwiches measured 328 feet long." },
+    {
+      "fact": "Yogurt was first made in the Middle East, dating back thousands of years."
+    },
+    {
+      "fact": "Bananas are slightly radioactive due to their potassium content."
+    },
+    {
+      "fact": "Caviar is made from the eggs of sturgeon, and it has been considered a delicacy for centuries."
+    },
+    {
+      "fact": "The world’s largest fruitcake was made in 2001 and weighed over 4,000 pounds."
+    },
+    {
+      "fact": "The average American eats about 23 pounds of pickles each year."
+    },
+    {
+      "fact": "Potatoes are believed to have been domesticated in the Andes over 7,000 years ago."
+    },
+    { "fact": "Coffee beans are actually the seeds of coffee cherries." },
+    { "fact": "Peanuts are technically legumes, not nuts." },
+    {
+      "fact": "The hottest chili pepper in the world is the Carolina Reaper, which can reach over 2 million Scoville heat units."
+    },
+    {
+      "fact": "Lettuce was once used as a medicinal herb in ancient civilizations for its calming properties."
+    },
+    {
+      "fact": "The world's largest burrito weighed 5,000 pounds and was made in Mexico in 2004."
+    },
+    {
+      "fact": "The first recorded recipe for pie dates back to ancient Egypt."
+    },
+    {
+      "fact": "The world’s most expensive cup of coffee is made from beans that have been eaten and excreted by civet cats."
+    },
+    {
+      "fact": "Mushrooms were once believed to have magical properties and were used in various rituals in ancient cultures."
+    },
+    { "fact": "The world’s longest hot dog was over 218 feet long." },
+    {
+      "fact": "Saffron, the most expensive spice in the world, comes from the stigma of a crocus flower."
+    },
+    { "fact": "Vanilla is the only edible fruit from the orchid family." },
+    {
+      "fact": "Cashews are native to Brazil but are now grown in many tropical countries around the world."
+    },
+    {
+      "fact": "Avocados are a great source of healthy fats, particularly monounsaturated fat."
+    },
+    {
+      "fact": "In the Middle Ages, people believed that eating garlic could ward off evil spirits."
+    },
+    {
+      "fact": "Carrots were originally purple, not orange, and the orange variety was developed in the 17th century in the Netherlands."
+    },
+    { "fact": "The largest meatball ever made weighed over 1,200 pounds." },
+    {
+      "fact": "The average American consumes more than 20 pounds of candy every year."
+    },
+    {
+      "fact": "Cucumbers are 95% water, which makes them a great hydrating food."
+    },
+    { "fact": "The world’s largest fruit salad weighed over 3,000 pounds." },
+    {
+      "fact": "In Ancient Rome, dormice were considered a delicacy and were fattened up to be eaten at banquets."
+    },
+    {
+      "fact": "Peaches are a symbol of longevity and immortality in Chinese culture."
+    },
+    {
+      "fact": "The first recorded use of the fork as an eating utensil dates back to the 11th century in Italy."
+    },
+    {
+      "fact": "Sweet potatoes are often mistaken for yams, but they are actually different species."
+    },
+    {
+      "fact": "In Japan, watermelon is often cut into cubes and served at summer festivals."
+    },
+    {
+      "fact": "Chili peppers can help improve circulation and boost metabolism."
+    },
+    {
+      "fact": "The world’s largest chocolate fountain is located in Las Vegas and is 27 feet tall."
+    },
+    {
+      "fact": "Honey is produced by bees from the nectar of flowers and is the only food that contains all the substances necessary for life."
+    },
+    {
+      "fact": "The first chocolate bars were made in the 19th century in Europe."
+    },
+    {
+      "fact": "Dried fruits were used as a source of sustenance by early explorers during long voyages."
+    },
+    {
+      "fact": "Olives have been cultivated for over 5,000 years, making them one of the oldest cultivated foods in history."
+    },
+    {
+      "fact": "The world’s most expensive hamburger costs over $5,000 and is topped with gold leaf, truffles, and caviar."
+    },
+    {
+      "fact": "Garlic was once used as an ancient remedy for various ailments, including the plague."
+    },
+    { "fact": "There are over 7,500 varieties of apples grown worldwide." },
+    { "fact": "The longest pizza ever made was over 1.5 miles long." },
+    {
+      "fact": "The average American consumes more than 5 pounds of cheese every month."
+    },
+    {
+      "fact": "The largest gingerbread house ever made measured over 21 feet tall and 35 feet wide."
+    },
+    { "fact": "Eggplants are technically berries, not vegetables." },
+    {
+      "fact": "Mangoes are the most widely consumed tropical fruit in the world."
+    },
+    {
+      "fact": "The world’s largest chocolate chip cookie weighed over 40,000 pounds."
+    },
+    {
+      "fact": "Lemonade was first served at the 19th-century World's Fair in Paris."
+    },
+    {
+      "fact": "The word 'cucumber' comes from the Latin word 'cucumis,' meaning 'melon'."
+    },
+    {
+      "fact": "Lobsters were once considered poor man’s food and were served to prisoners in early colonial America."
+    },
+    {
+      "fact": "The world’s most expensive pizza, topped with caviar, lobster, and gold flakes, costs over $12,000."
+    },
+    {
+      "fact": "The first hot dog was sold at the 1904 World’s Fair in St. Louis."
+    },
+    {
+      "fact": "Figs are not only a great snack, but they are also used to make delicious jams and spreads."
+    },
+    {
+      "fact": "Potatoes are the most widely grown root vegetable in the world."
+    },
+    {
+      "fact": "Coconut water is a natural isotonic drink, rich in electrolytes like potassium and sodium."
+    },
+    {
+      "fact": "The largest sandwich ever made weighed over 5,000 pounds and measured 3.5 feet high."
+    },
+    {
+      "fact": "Ketchup was once sold as a medicine in the 1830s, used to treat digestive issues."
+    },
+    {
+      "fact": "Fruits like apples, oranges, and bananas are technically classified as berries, according to botanical definitions."
+    },
+    {
+      "fact": "Pistachios are one of the few nuts that are considered a fruit since they come from a seed inside a fruit."
+    },
+    { "fact": "A watermelon is 92% water, making it a very hydrating fruit." },
+    {
+      "fact": "Raspberries are considered an aggregate fruit because each raspberry is made up of smaller individual fruits."
+    },
+    {
+      "fact": "The world's most expensive honey comes from the rare black bee, which produces honey valued at over $1,000 per jar."
+    },
+    {
+      "fact": "The first fruit ever grown in space was a red tomato aboard the Space Shuttle Columbia in 1995."
+    },
+    {
+      "fact": "Margarine was invented in the late 19th century as a cheaper alternative to butter."
+    },
+    { "fact": "The longest noodle ever made was over 8,000 feet long." },
+    {
+      "fact": "Chili peppers contain capsaicin, which can trigger the release of endorphins, causing a feeling of euphoria."
+    },
+    {
+      "fact": "Watermelons can be either seeded or seedless, with seedless varieties being bred for convenience."
+    },
+    {
+      "fact": "The first restaurant in the world, according to most historians, was opened in Paris in 1765."
+    },
+    {
+      "fact": "Pineapples were so expensive and rare in 18th-century Europe that they were sometimes rented out for display at elite events."
+    },
+    {
+      "fact": "The largest known fruit in the world is the jackfruit, which can weigh up to 80 pounds."
+    },
+    {
+      "fact": "Tomatoes were once believed to be poisonous in Europe, and people used to grow them as ornamental plants."
+    },
+    {
+      "fact": "Apples are grown in every state in the U.S., but Washington State produces the most."
+    },
+    {
+      "fact": "Mangoes are the most widely consumed tropical fruit in the world, with over 50 million tons consumed each year."
+    },
+    {
+      "fact": "The average American eats about 1,500 pounds of food every year."
+    },
+    {
+      "fact": "The first coffee beans were discovered in Ethiopia and were used for centuries as a stimulant by the local population."
+    },
+    {
+      "fact": "Chocolate comes from the seeds of the cacao tree and has been enjoyed by humans for over 3,000 years."
+    },
+    {
+      "fact": "Strawberries are the only fruit that have their seeds on the outside."
+    },
+    {
+      "fact": "The most expensive coffee in the world, called Kopi Luwak, is made from beans that have been eaten and excreted by civet cats."
+    },
+    {
+      "fact": "The world’s largest fruit salad, made in 2002, weighed over 3,000 pounds and included over 60 different fruits."
+    },
+    {
+      "fact": "A single vanilla orchid flower only lasts one day, which is why vanilla is one of the most labor-intensive crops to grow."
+    },
+    {
+      "fact": "Carrots were originally purple in color before orange carrots became more popular in the 17th century."
+    },
+    {
+      "fact": "The first recorded recipe for pizza was from Naples, Italy, in the 18th century."
+    },
+    {
+      "fact": "In ancient Egypt, garlic was used to ward off evil spirits and was also believed to have medicinal properties."
+    },
+    {
+      "fact": "In medieval Europe, it was common for people to add spices like cloves, cinnamon, and nutmeg to preserve food."
+    },
+    {
+      "fact": "The largest collection of spice jars ever assembled contains more than 10,000 items from around the world."
+    },
+    {
+      "fact": "Potatoes are the fourth most consumed crop in the world after rice, wheat, and corn."
+    },
+    {
+      "fact": "Cucumbers are actually a type of gourd and are closely related to pumpkins and squash."
+    },
+    {
+      "fact": "Figs were among the first plants cultivated by humans, dating back over 11,000 years."
+    },
+    {
+      "fact": "Avocados contain more potassium than bananas and are often called 'nature’s butter' due to their creamy texture."
+    },
+    {
+      "fact": "The world’s largest hamburger, made in 2017, weighed over 2,000 pounds and required a team of chefs to cook."
+    },
+    {
+      "fact": "Lobster was once considered a food for the poor, and in the 19th century, it was commonly served to prisoners."
+    },
+    {
+      "fact": "The first known ice cream recipe was written in the 18th century in the U.S. by a man named Philip Lenzi."
+    },
+    {
+      "fact": "The world's largest chocolate bar weighed over 12,000 pounds and was created in Armenia."
+    },
+    {
+      "fact": "Hummus is thought to have originated in the Middle East over 1,200 years ago, with many countries claiming to have invented it."
+    },
+    {
+      "fact": "The largest pancake ever made was over 122 feet wide, and it required 1,000 gallons of batter."
+    },
+    {
+      "fact": "The world's longest sushi roll was over 2,000 feet long and was made in Japan."
+    },
+    {
+      "fact": "In ancient Greece, olive oil was used not only for cooking but also for bathing and religious ceremonies."
+    },
+    {
+      "fact": "Bananas are technically berries, but they are often referred to as a fruit."
+    },
+    {
+      "fact": "In medieval times, salt was so valuable that it was sometimes used as currency."
+    },
+    {
+      "fact": "Coffee was first consumed as a beverage in the 15th century by Sufi monks in Yemen."
+    },
+    {
+      "fact": "The most expensive spice in the world is saffron, which comes from the flower of the saffron crocus."
+    },
+    {
+      "fact": "Cabbage was used in ancient Rome to treat ailments like indigestion and high blood pressure."
+    },
+    {
+      "fact": "The first chewing gum was made from the sap of a tree in Central America and was chewed by the Mayans."
+    },
+    {
+      "fact": "The earliest known recipe for bread dates back over 14,000 years, and it was discovered in Jordan."
+    },
+    {
+      "fact": "In ancient Rome, a popular snack was a type of cheese served with figs and honey."
+    },
+    {
+      "fact": "Peas have been cultivated for over 10,000 years, and they were an important food source in ancient civilizations."
+    },
+    {
+      "fact": "The world's largest potato weighed over 18 pounds and was grown in the U.K."
+    },
+    { "fact": "The banana plant is technically a herb, not a tree." },
+    {
+      "fact": "Kiwis were originally called 'Chinese gooseberries' until they were renamed in the 1960s after New Zealand’s national bird."
+    },
+    {
+      "fact": "On average, a person consumes 100 pounds of potatoes each year in the form of fries, chips, and baked potatoes."
+    },
+    { "fact": "Peaches are a symbol of immortality in Chinese culture." },
+    {
+      "fact": "The longest chili pepper string ever made was over 3 miles long."
+    },
+    {
+      "fact": "The longest line of chocolate was over 2 miles long and was set in Switzerland."
+    },
+    {
+      "fact": "Apples are part of the rose family, and there are over 7,500 varieties of apples worldwide."
+    },
+    {
+      "fact": "In the 17th century, sugar was so expensive that it was considered a luxury item for the elite."
+    },
+    {
+      "fact": "The world’s most expensive tea is called Da Hong Pao, and a small ounce of it can cost more than $1,000."
+    },
+    {
+      "fact": "The first recorded use of the word 'sushi' dates back to the 8th century in Japan."
+    },
+    {
+      "fact": "The longest sandwich ever made measured over 1,500 feet and was created in Lebanon."
+    },
+    {
+      "fact": "Apples were brought to America by European colonists, who planted them in the 1600s."
+    },
+    {
+      "fact": "Tomatoes are the most consumed vegetable in the world, with over 170 million tons produced each year."
+    },
+    {
+      "fact": "The first chocolate bar was invented in the 19th century in England."
+    },
+    {
+      "fact": "Carrots were originally used for medicinal purposes in ancient civilizations."
+    },
+    {
+      "fact": "To keep your herbs fresh longer, wrap them in a damp paper towel and store them in a plastic bag in the fridge."
+    },
+    {
+      "fact": "You can use a muffin tin to bake perfectly round pancakes or eggs."
+    },
+    {
+      "fact": "Add a pinch of salt to your coffee grounds to reduce bitterness."
+    },
+    {
+      "fact": "To easily peel ginger, use a spoon to scrape off the skin instead of a knife."
+    },
+    {
+      "fact": "Use an ice cube tray to freeze leftover herbs in olive oil for easy use later."
+    },
+    {
+      "fact": "To prevent your potatoes from turning brown, place them in water after peeling."
+    },
+    {
+      "fact": "For fluffier scrambled eggs, add a splash of milk or cream before cooking."
+    },
+    {
+      "fact": "To easily separate eggs, use a plastic bottle to suck up the yolk."
+    },
+    {
+      "fact": "Wrap a moist paper towel around the top of your bananas to slow down ripening."
+    },
+    {
+      "fact": "To keep sliced apples from browning, soak them in a mixture of water and lemon juice."
+    },
+    { "fact": "Use a spoon to easily remove the pit from an avocado." },
+    {
+      "fact": "To make your cheese last longer, wrap it in wax paper instead of plastic."
+    },
+    {
+      "fact": "To prevent your pancakes from sticking, grease your pan with a bit of oil or butter and wipe off the excess with a paper towel."
+    },
+    { "fact": "Freeze grapes to chill your wine without watering it down." },
+    {
+      "fact": "Soak your wooden skewers in water before using them to prevent burning on the grill."
+    },
+    {
+      "fact": "To easily remove corn kernels from the cob, use a bundt pan to catch them as you slice."
+    },
+    {
+      "fact": "To keep your cutting board from slipping, place a damp towel underneath it."
+    },
+    {
+      "fact": "For better caramelized onions, cook them slowly over low heat and add a pinch of salt to release moisture."
+    },
+    {
+      "fact": "Use dental floss to cut soft cheeses or cakes without sticking."
+    },
+    {
+      "fact": "To make your bacon extra crispy, bake it on a cooling rack set over a baking sheet."
+    },
+    {
+      "fact": "To make your own homemade salad dressing, just mix olive oil, vinegar, mustard, and a little honey."
+    },
+    {
+      "fact": "If your garlic starts to burn in the pan, add a splash of water to cool it down quickly."
+    },
+    {
+      "fact": "To remove the skins from tomatoes easily, score the bottom and blanch them in boiling water for a few seconds."
+    },
+    {
+      "fact": "Use a paper towel to keep your spinach fresh longer in the fridge."
+    },
+    {
+      "fact": "To store your cake layers without them drying out, cover them with plastic wrap and a damp towel."
+    },
+    {
+      "fact": "Freeze leftover stock in muffin tins for easy portioning later."
+    },
+    {
+      "fact": "Make your own non-stick baking spray by mixing equal parts vegetable oil and flour."
+    },
+    {
+      "fact": "Use a vegetable peeler to shave off thin slices of cheese for garnish."
+    },
+    { "fact": "Grate frozen butter into flour for flakier pie crusts." },
+    {
+      "fact": "Add a few drops of lemon juice to your tea to bring out its natural flavor."
+    },
+    {
+      "fact": "Place a damp paper towel over a microwave-safe plate to keep food from drying out while reheating."
+    },
+    {
+      "fact": "Cut your meat into smaller pieces to cook it faster and more evenly."
+    },
+    {
+      "fact": "To keep your kitchen from smelling like garlic, rub your hands with stainless steel after chopping it."
+    },
+    {
+      "fact": "To quickly peel a tomato, use a sharp knife to score an 'X' on the bottom, then dip it in boiling water for 30 seconds."
+    },
+    {
+      "fact": "Add a small amount of baking soda to tomato sauce to reduce its acidity."
+    },
+    {
+      "fact": "Use a clean paintbrush to apply butter to your baked goods for even coverage."
+    },
+    {
+      "fact": "To ripen avocados faster, place them in a brown paper bag with an apple."
+    },
+    {
+      "fact": "Keep your knife sharp by honing it regularly with a sharpening rod."
+    },
+    {
+      "fact": "For a healthier alternative, substitute Greek yogurt for sour cream in dips and dressings."
+    },
+    {
+      "fact": "Keep your pizza crust crispy by preheating the oven with a pizza stone inside."
+    },
+    {
+      "fact": "To easily peel potatoes, boil them first and then run cold water over them."
+    },
+    { "fact": "Freeze leftover wine in ice cube trays for use in cooking." },
+    {
+      "fact": "When making meatballs, wet your hands with water to prevent the mixture from sticking."
+    },
+    {
+      "fact": "To quickly chill a bottle of wine, wrap it in a wet towel and place it in the freezer for 15 minutes."
+    },
+    {
+      "fact": "Grill vegetables in a basket to keep them from falling through the grill grates."
+    },
+    {
+      "fact": "Use a zester to grate fresh parmesan cheese for a perfect topping."
+    },
+    {
+      "fact": "To make perfectly soft-boiled eggs, bring water to a boil, add eggs, then simmer for 4-5 minutes."
+    },
+    { "fact": "Soak your wooden spoons in oil overnight to prevent cracking." },
+    {
+      "fact": "For easier cleanup, line your baking sheets with parchment paper."
+    },
+    {
+      "fact": "Use a toothpick to check if a cake is done by inserting it into the center — it should come out clean."
+    },
+    {
+      "fact": "To get more juice out of citrus, roll them on the countertop before cutting."
+    },
+    {
+      "fact": "To avoid soggy sandwiches, place your lettuce between slices of meat or cheese to act as a barrier."
+    },
+    {
+      "fact": "Use a melon baller to scoop out the center of tomatoes for stuffing."
+    },
+    {
+      "fact": "Sprinkle a little sugar on the cut side of your fruit to prevent it from browning."
+    },
+    {
+      "fact": "You can make your own whipped cream by shaking heavy cream in a jar for a few minutes."
+    },
+    {
+      "fact": "To make your own crispy fries at home, soak potato slices in water for at least an hour before frying."
+    },
+    {
+      "fact": "To easily remove the skin from a kiwi, slice off both ends and then peel off the skin with a spoon."
+    },
+    {
+      "fact": "For more tender chicken breasts, marinate them in a mix of olive oil, lemon juice, and herbs."
+    },
+    {
+      "fact": "To prevent your avocados from browning, add a little lime juice."
+    },
+    {
+      "fact": "You can use a frozen water bottle to keep a cooler cold when you're on the go."
+    },
+    {
+      "fact": "To make perfect hard-boiled eggs, bring water to a boil, then turn off the heat and let eggs sit covered for 10 minutes."
+    },
+    {
+      "fact": "For smoother mashed potatoes, use a potato ricer instead of a masher."
+    },
+    {
+      "fact": "To keep your pancakes fluffy, let the batter rest for 10-15 minutes before cooking."
+    }
+  ]
+}

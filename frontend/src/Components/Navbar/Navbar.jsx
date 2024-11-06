@@ -2,15 +2,21 @@ import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
-import logo from "./../../../src/logo.png";
-import { Popup } from "./Login";
+import logo from "../../logo.png";
+import { Popup } from "../Authentication/Login/Login";
 
 export const Navbar = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
-  const jwtToken = sessionStorage.getItem("jwt"); // Check for JWT in session storage
+  const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false);
+  const jwtToken = sessionStorage.getItem("jwt");
 
-  const togglePopup = () => {
-    setPopupOpen(!isPopupOpen);
+  const togglePopup = () => setPopupOpen(!isPopupOpen);
+  const toggleProfileDropdown = () =>
+    setProfileDropdownOpen(!isProfileDropdownOpen);
+
+  const handleSignOut = () => {
+    sessionStorage.removeItem("jwt");
+    window.location.reload(); // Reload to update the UI after sign-out
   };
 
   return (
@@ -64,12 +70,29 @@ export const Navbar = () => {
             <a href="/contact">Contact</a>
           </li>
           <li className="sign">
-            <a
-              href={jwtToken ? "/profile" : "#"}
-              onClick={jwtToken ? undefined : togglePopup}
-            >
-              {jwtToken ? "Profile" : "Sign in/up"}
-            </a>
+            {jwtToken ? (
+              <span onClick={toggleProfileDropdown}>
+                Profile <i className="arrow"></i>
+              </span>
+            ) : (
+              <span onClick={togglePopup}>Sign in/up</span>
+            )}
+            {jwtToken && isProfileDropdownOpen && (
+              <ul className="dropdown">
+                <li>
+                  <a href="/profile">View Profile</a>
+                </li>
+                <li>
+                  <span>Messages</span>
+                </li>
+                <li>
+                  <a href="/settings">Settings</a>
+                </li>
+                <li>
+                  <span onClick={handleSignOut}>Sign out</span>
+                </li>
+              </ul>
+            )}
           </li>
         </ul>
       </div>

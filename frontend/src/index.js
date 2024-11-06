@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Homepage from "./Homepage/Homepage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Register } from "./Components/Register/Register";
+import { Register } from "./Components/Authentication/Register/Register";
 import Recipes from "./Components/Recipes/Recipes";
 import Contact from "./Components/Contact/Contact";
 import { Contests } from "./Components/Contests/Contests";

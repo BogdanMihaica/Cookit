@@ -1,2 +1,7 @@
-package com.cookit.app.dtos.enums;public enum MessageType {
+package com.cookit.app.dtos.enums;
+
+public enum MessageType {
+    CHAT,
+    JOIN,
+    LEAVE
 }
