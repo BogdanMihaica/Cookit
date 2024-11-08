@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./MessageSidebar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 //cand ma gandesc ce o sa fie aici.. doamne
 const Message = ({ sender, receiver, text }) => {
@@ -82,7 +84,7 @@ const SelectedChat = ({ username }) => {
           className="message-textarea"
         />
         <button className="send-button" onClick={handleSend}>
-          Send
+          <FontAwesomeIcon icon={faPaperPlane} />
         </button>
       </div>
     </div>

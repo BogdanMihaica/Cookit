@@ -1,9 +1,12 @@
 package com.cookit.app.models;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
+
 @Data
+@Builder
 @Entity
 @Table(name = "chats")
 public class Chat {

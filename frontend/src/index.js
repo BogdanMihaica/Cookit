@@ -17,6 +17,7 @@ import CookingTechniques from "./Components/CookingTechniques/CookingTechinques"
 import FactOfTheDay from "./Components/FactOfTheDay/FactOfTheDay";
 import IngredientsPage from "./Components/IngredientsPage/IngredientsPage";
 import RecipeUploadForm from "./Components/RecipeUploadForm/RecipeUploadForm";
+import NotFound from "./custom/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
   {
     path: "/settings",
     element: <ProfileSettingsPage />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));

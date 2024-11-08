@@ -24,7 +24,7 @@ export default function Homepage() {
   return (
     <>
       <Navbar />
-
+      <MessageSidebar />
       <div className="homepage-container">
         <div className="section-one">
           <div className="home-login-info">

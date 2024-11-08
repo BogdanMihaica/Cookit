@@ -27,6 +27,7 @@ export const Popup = ({ isOpen, onClose }) => {
       const { token } = await response.json();
       sessionStorage.setItem("jwt", token);
       alert("Login successful!");
+      window.location.reload();
       onClose();
     } else {
       const errorMessage = await response.text();

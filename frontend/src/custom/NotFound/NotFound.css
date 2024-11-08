@@ -1,0 +1,72 @@
+.scene-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+.scene-img {
+  position: absolute;
+  left: 0;
+  top: -190px;
+  width: 100%;
+
+  z-index: -1;
+}
+.error404 {
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  font-size: 20rem;
+  left: calc(50vw - 280px);
+  color: white;
+  font-family: "Anton", "Arial";
+}
+.mic {
+  position: absolute;
+  transform: scale(0.2);
+  left: calc(50vw - 600px);
+  top: -280px;
+  z-index: 1;
+}
+.tomato-container {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+/* Keyframes for tomato movement */
+@keyframes flyToCenter {
+  0% {
+    opacity: 1;
+    transform: translate(var(--start-x), var(--start-y))
+      scale(var(--start-scale));
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2); /* Move tomatoes to the center of the screen */
+  }
+}
+
+.tomato {
+  position: absolute;
+  z-index: 2;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  animation: flyToCenter 1s ease forwards; /* Tomato animation now lasts 0.5s */
+  pointer-events: none;
+}
+
+/* CSS for error text movement */
+.error404 {
+  transition: transform 0.5s cubic-bezier(0.005, 1.215, 0.63, 1.21);
+}
+.error404.dodging {
+  transform: translateX(100px) rotate(10deg);
+}

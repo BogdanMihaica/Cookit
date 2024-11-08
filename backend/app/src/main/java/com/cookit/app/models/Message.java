@@ -1,5 +1,6 @@
 package com.cookit.app.models;
 
+import com.cookit.app.enums.MessageStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -29,6 +30,10 @@ public class Message {
 
     @Column(name = "sent_on", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private java.sql.Timestamp sentOn;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", nullable = false)
+    private MessageStatus status;
 
 
 }
