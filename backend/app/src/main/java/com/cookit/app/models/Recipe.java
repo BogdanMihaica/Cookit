@@ -3,6 +3,7 @@ package com.cookit.app.models;
 import jakarta.persistence.*;
 import lombok.Data;
 
+
 @Data
 @Entity
 @Table(name = "recipes")
@@ -11,7 +12,6 @@ public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
 
     @Column(name = "author_id", nullable = false)
     private Integer authorId;

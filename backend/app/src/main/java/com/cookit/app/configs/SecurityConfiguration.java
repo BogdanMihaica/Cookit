@@ -36,7 +36,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(auth -> auth
 //                        .requestMatchers(HttpMethod.GET, "/reviews/**").permitAll()
 //                        .requestMatchers(HttpMethod.POST, "/reviews").authenticated()
-                        .requestMatchers("/reviews/**","/users/**","/auth/**", "/api/ingredients/**", "/api/techniques/**", "/api/recipes/**").permitAll()
+                        .requestMatchers("/ws/*","/reviews/**","/users/**","/auth/**", "/api/ingredients/**", "/api/techniques/**", "/api/recipes/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session

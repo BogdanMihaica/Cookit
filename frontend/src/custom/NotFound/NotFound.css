@@ -2,25 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   overflow: hidden;
   position: relative;
 }
 .scene-img {
-  position: absolute;
+  position: relative;
   left: 0;
   top: -190px;
-  width: 100%;
-
-  z-index: -1;
+  width: 1920px;
+  height: auto;
+  margin-bottom: 0;
+  z-index: -2;
 }
 .error404 {
+  user-select: none;
   position: absolute;
   z-index: 0;
-  top: 0px;
-  font-size: 20rem;
-  left: calc(50vw - 280px);
+  top: 80px;
+  font-size: 17rem;
+  left: calc(50vw - 220px);
   color: white;
   font-family: "Anton", "Arial";
 }
@@ -29,44 +31,84 @@
   transform: scale(0.2);
   left: calc(50vw - 600px);
   top: -280px;
+  user-select: none;
   z-index: 1;
 }
 .tomato-container {
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 1000px;
   position: absolute;
+  overflow: hidden;
 }
-/* Keyframes for tomato movement */
+.shadow {
+  position: absolute;
+  z-index: -1;
+  color: rgba(255, 0, 0, 0.322);
+  top: 15%;
+  left: 40%;
+  width: 300px;
+  height: 320px;
+  border-radius: 50%;
+}
+.tomato {
+  user-select: none;
+  position: absolute;
+  z-index: 2;
+  opacity: 1;
+  animation: flyToCenter var(--animation-duration) ease forwards;
+  pointer-events: none;
+}
+
 @keyframes flyToCenter {
   0% {
     opacity: 1;
     transform: translate(var(--start-x), var(--start-y))
       scale(var(--start-scale));
   }
+
   70% {
+    z-index: 2;
     opacity: 1;
   }
+  75% {
+    z-index: 1;
+  }
   100% {
+    z-index: -1;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.2); /* Move tomatoes to the center of the screen */
+    transform: translate(var(--center-x), var(--center-y)) scale(0.2);
   }
 }
 
-.tomato {
-  position: absolute;
-  z-index: 2;
-  opacity: 1;
-  top: 50%;
-  left: 50%;
-  animation: flyToCenter 1s ease forwards; /* Tomato animation now lasts 0.5s */
-  pointer-events: none;
-}
-
-/* CSS for error text movement */
+/* Existing styles for error text movement */
 .error404 {
-  transition: transform 0.5s cubic-bezier(0.005, 1.215, 0.63, 1.21);
+  transition: all 0.5s cubic-bezier(0.005, 1.215, 0.63, 1.21);
+}
+.error404.right {
+  transform: translateX(250px) rotate(10deg);
+}
+.error404.left {
+  transform: translateX(-250px) rotate(-10deg);
+}
+.error404.up {
+  transform: translateY(-150px) scaleY(0.5);
+}
+.error404.down {
+  transform: translateY(90px) scaleY(0.5);
 }
 .error404.dodging {
-  transform: translateX(100px) rotate(10deg);
+  filter: blur(2px);
+}
+.hit {
+  transition: color 0.2 ease;
+  color: rgb(255, 192, 192);
+}
+.hit-counter {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  font-family: "Anton";
+  color: white;
+  font-size: 2.2rem;
 }

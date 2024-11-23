@@ -3,7 +3,9 @@ package com.cookit.app.models;
 import com.cookit.app.enums.MessageStatus;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Setter;
 
+@Setter
 @Data
 @Entity
 @Table(name = "messages")
