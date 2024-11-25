@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class ChatService {
@@ -22,7 +23,8 @@ public class ChatService {
     {
         return chatRepository.findById(id).orElse(null);
     }
-    public List<Chat> findChatsByUserId(Integer userId) {
-        return chatRepository.findByUserId(userId);
+
+    public List<Chat> findChatsOfUser(Integer id){
+        return chatRepository.findChatsByUserId(id);
     }
 }

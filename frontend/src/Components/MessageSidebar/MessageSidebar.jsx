@@ -76,38 +76,11 @@ const SideChat = ({ photo, username, lastMessage, seen, onClick }) => (
   </div>
 );
 
-export function MessageSidebar() {
+export function MessageSidebar({ withUser = -1 }) {
   const [selectedChat, setSelectedChat] = useState(null);
   const [chats, setChats] = useState([]);
   const [messages, setMessages] = useState([]);
   const ws = useRef(null);
-
-  // Initialize WebSocket connection
-  useEffect(() => {
-    const token = sessionStorage.getItem("jwt");
-    if (!token) {
-      console.error("No JWT found. Cannot connect to WebSocket.");
-      return;
-    }
-    ws.current = new WebSocket("ws://localhost:8090/ws/app/chat");
-
-    ws.current.onopen = () => {
-      console.log("Connected to WebSocket");
-    };
-
-    ws.current.onmessage = (event) => {
-      const receivedMessage = JSON.parse(event.data);
-      setMessages((prevMessages) => [...prevMessages, receivedMessage]);
-    };
-
-    ws.current.onclose = () => {
-      console.log("WebSocket disconnected");
-    };
-
-    return () => {
-      ws.current.close();
-    };
-  }, []);
 
   const handleSendMessage = (message) => {
     if (ws.current && ws.current.readyState === WebSocket.OPEN) {

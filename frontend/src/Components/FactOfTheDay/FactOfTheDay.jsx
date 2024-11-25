@@ -27,7 +27,7 @@ const FactOfTheDay = () => {
   return (
     <>
       <Navbar />
-      <div class="background">
+      <div className="background">
         <div className="fact-container">
           <h2 className="fact-title">Did you know that...</h2>
           {isLoading ? (

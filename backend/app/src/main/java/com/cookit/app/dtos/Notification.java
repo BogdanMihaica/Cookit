@@ -5,9 +5,8 @@ import lombok.Data;
 import java.sql.Timestamp;
 
 @Data
-public class Notificiation {
+public class Notification {
     private String text;
     private Integer senderId;
-    private Integer receiverId;
     private Timestamp sendDate;
 }

@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { replace, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComment } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faComment } from "@fortawesome/free-solid-svg-icons";
 import "./UserProfilePage.css";
 import { Recipe } from "../Recipe/Recipe";
 import { Navbar } from "../Navbar/Navbar";
+import { MessageSidebar } from "../MessageSidebar/MessageSidebar";
 
 const UserProfilePage = () => {
   const { usernameParam } = useParams();
   const [userData, setUserData] = useState(null);
   const [userRecipes, setUserRecipes] = useState([]);
   const [username, setUserName] = useState("");
+  const [isMessagesOpen, setIsMessagesOpen] = useState(false);
   const recipesPerPage = 4;
   const [currentPage, setCurrentPage] = useState(0);
+
+  const handleOpenMessages = () => {
+    setIsMessagesOpen(!isMessagesOpen);
+  };
   const handleNextPage = () => {
     setCurrentPage((prevPage) => prevPage + 1);
   };
@@ -23,6 +29,18 @@ const UserProfilePage = () => {
     }
   };
 
+  const spawnMessages = () => {
+    if (isMessagesOpen && userData) {
+      return (
+        <>
+          <MessageSidebar withUser={userData["id"]} />
+          <div className="close-sidebar" onClick={handleOpenMessages}>
+            <FontAwesomeIcon icon={faArrowLeft} className="arrow" />
+          </div>
+        </>
+      );
+    } else return <></>;
+  };
   useEffect(() => {
     if (userData != null) {
       const fetchUserRecipes = async () => {
@@ -49,9 +67,7 @@ const UserProfilePage = () => {
       fetchUserRecipes();
     }
   }, [userData]);
-  useEffect(() => {
-    console.log(userRecipes);
-  }, [userRecipes]);
+
   useEffect(() => {
     const fetchData = async () => {
       let userId;
@@ -61,7 +77,6 @@ const UserProfilePage = () => {
         const payload = JSON.parse(atob(token.split(".")[1]));
         userId = payload.sub;
       }
-      console.log(userId);
       const url = usernameParam
         ? `http://localhost:8090/users/username/${usernameParam}`
         : `http://localhost:8090/users/username/${userId}`;
@@ -84,8 +99,9 @@ const UserProfilePage = () => {
     (currentPage + 1) * recipesPerPage
   );
   return (
-    <>
-      <Navbar />
+    <div className="full">
+      {spawnMessages()}
+      <Navbar messageOpen={isMessagesOpen} />
       <div className="user-profile-container">
         <div className="user-profile-square">
           <img
@@ -97,7 +113,12 @@ const UserProfilePage = () => {
         <div className="user-profile-header">
           <h2 className="user-profile-name">{userData.username}</h2>
           {usernameParam || usernameParam !== userData.username ? (
-            <button className="user-profile-message-button">
+            <button
+              className="user-profile-message-button"
+              onClick={handleOpenMessages}
+            >
+              {" "}
+              {/* LOOK HERE */}
               <FontAwesomeIcon
                 icon={faComment}
                 className="user-profile-message-icon"
@@ -143,7 +164,7 @@ const UserProfilePage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,8 @@
 .user-profile-container {
+  position: relative;
   max-width: 900px;
-  margin: 6rem auto;
+  margin-inline: auto;
+  margin-top: 6rem;
   padding: 2rem;
   color: #333;
   background-color: #fff;

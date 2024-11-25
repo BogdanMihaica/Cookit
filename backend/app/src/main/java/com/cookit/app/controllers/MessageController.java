@@ -1,7 +1,7 @@
 package com.cookit.app.controllers;
 
 
-import com.cookit.app.dtos.MessageDto;
+import com.cookit.app.dtos.Notification;
 import com.cookit.app.models.Message;
 import com.cookit.app.services.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,18 +16,18 @@ public class MessageController {
     @Autowired
     MessageService messageService;
 
-    @MessageMapping("/{chatId}")
-    @SendTo("/chat/{chatId}")
+    @MessageMapping("/chat/{chatId}")   //basically this is /app/chat/{chatId}, where we send the message
+    @SendTo("/chat/{chatId}")   //this is /topic/chat/{chatId} , the place where our partner is subscribed
     public Message sendMessage(@DestinationVariable String chatId, Message message)
     {
         messageService.saveMessage(message);
         return message;
     }
 
-    @MessageMapping("/{userId}")
-    @SendTo("/notif/{userId}")
-    public String sendNotification(@DestinationVariable String userId, Message message)
+    @MessageMapping("/user/{userId}")
+    @SendTo("/user/{userId}")
+    public Notification sendNotification(@DestinationVariable String userId, Notification notification)
     {
-        return "New message from: " + userId;
+        return notification;
     }
 }

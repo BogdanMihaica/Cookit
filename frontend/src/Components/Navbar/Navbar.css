@@ -381,3 +381,23 @@
   background-color: #e0e0e0; /* Slightly darker background for active suggestion */
   font-weight: bold; /* Highlight active suggestion */
 }
+
+.close-sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  width: 20px;
+  height: 100px;
+  background-color: rgb(227, 227, 227);
+  border-radius: 10px;
+  border: 1px solid gray;
+  left: 54.4%;
+  top: calc(50% - 50px);
+  z-index: 10000001;
+  transition: all 0.5s ease;
+}
+.close-sidebar:hover {
+  background-color: rgb(194, 194, 194);
+}
