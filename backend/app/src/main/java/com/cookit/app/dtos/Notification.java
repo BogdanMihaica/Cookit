@@ -5,7 +5,7 @@ import lombok.Data;
 import java.sql.Timestamp;
 
 @Data
-public class MessageDto {
+public class Notificiation {
     private String text;
     private Integer senderId;
     private Integer receiverId;
