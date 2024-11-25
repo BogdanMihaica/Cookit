@@ -1,6 +1,6 @@
 # CookIt 🍳
 
-**CookIt** is a modern, minimalist recipe website designed to inspire cooking enthusiasts with a blend of official and user-submitted recipes. With its sleek interface and practical features, CookIt makes discovering, learning, and sharing recipes easier than ever.
+**CookIt** is a modern, minimalist recipe website designed to inspire cooking enthusiasts with a blend of official and user-submitted recipes. With its sleek interface and practical features, CookIt makes discovering, learning, and sharing recipes easier than ever. Also you can interact with other users through One-to-One chat, reviews and comments.
 
 ## 🌟 Features
 - **Elegant Design**: Minimalist UI with a black, white, and velvet red color scheme.
