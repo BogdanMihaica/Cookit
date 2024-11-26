@@ -1,10 +1,12 @@
 # CookIt 🍳
 
-**CookIt** is a modern, minimalist recipe website designed to inspire cooking enthusiasts with a blend of official and user-submitted recipes. With its sleek interface and practical features, CookIt makes discovering, learning, and sharing recipes easier than ever.
+**CookIt** is a modern, minimalist recipe website designed to inspire cooking enthusiasts with a blend of official and user-submitted recipes. With its sleek interface and practical features, CookIt makes discovering, learning, and sharing recipes easier than ever. Also you can interact with other users through One-to-One chat, reviews and comments.
 
 ## 🌟 Features
 - **Elegant Design**: Minimalist UI with a black, white, and velvet red color scheme.
 - **Diverse Recipes**: Explore recipes scraped from reputable sources like *Simply* and *BBCFood* or dive into user-submitted creations.
+- **P2P chat**: Once you are signed in on our application you can start having real-time conversations with various users.
+- **Competitiveness**: You can take place in various contests to show-off your cooking skills and recipe building, You'll also get titles and rewards for competing.
 - **Educational Resources**:
   - **Cooking Techniques**: Learn helpful techniques to level up your cooking skills.
   - **Ingredient Insights**: Discover details about ingredients and their uses.
