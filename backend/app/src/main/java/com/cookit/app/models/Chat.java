@@ -1,10 +1,7 @@
 package com.cookit.app.models;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 
 @Data
@@ -12,6 +9,8 @@ import lombok.Setter;
 @Setter
 @Builder
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "chats")
 public class Chat {
 

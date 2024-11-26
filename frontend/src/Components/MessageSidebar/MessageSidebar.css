@@ -18,6 +18,7 @@
 }
 
 .side-chat-container {
+  cursor: pointer;
   display: flex;
   align-items: center;
   padding: 10px;

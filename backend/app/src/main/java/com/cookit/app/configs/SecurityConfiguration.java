@@ -28,6 +28,7 @@ public class SecurityConfiguration {
     @Autowired
     private JwtAuthenticationFilter jwtAuthenticationFilter;
 
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
@@ -36,7 +37,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(auth -> auth
 //                        .requestMatchers(HttpMethod.GET, "/reviews/**").permitAll()
 //                        .requestMatchers(HttpMethod.POST, "/reviews").authenticated()
-                        .requestMatchers("/chat-system/**","/api/chat/**","/reviews/**","/users/**","/auth/**", "/api/ingredients/**", "/api/techniques/**", "/api/recipes/**").permitAll()
+                        .requestMatchers("/chat-system/**","/reviews/**","/users/**","/auth/**", "/api/ingredients/**", "/api/techniques/**", "/api/recipes/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session

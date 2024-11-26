@@ -18,6 +18,7 @@ import FactOfTheDay from "./Components/FactOfTheDay/FactOfTheDay";
 import IngredientsPage from "./Components/IngredientsPage/IngredientsPage";
 import RecipeUploadForm from "./Components/RecipeUploadForm/RecipeUploadForm";
 import NotFound from "./custom/NotFound/NotFound";
+import { WebSocketProvider } from "./Components/Providers/WebSocketProvider";
 
 const router = createBrowserRouter([
   {
@@ -84,8 +85,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    
-    <RouterProvider router={router} />
+    <WebSocketProvider>
+      <RouterProvider router={router} />
+    </WebSocketProvider>
   </React.StrictMode>
 );
 

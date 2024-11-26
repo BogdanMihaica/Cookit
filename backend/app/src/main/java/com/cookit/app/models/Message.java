@@ -36,6 +36,4 @@ public class Message {
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
     private MessageStatus status;
-
-
 }

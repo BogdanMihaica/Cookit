@@ -11,15 +11,24 @@ import { Recipe } from "../Components/Recipe/Recipe";
 import Footer from "../Components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Popup } from "../Components/Authentication/Login/Login";
 import { MessageSidebar } from "../Components/MessageSidebar/MessageSidebar";
+import {
+  getChatOfUsers,
+  getChatsOfUser,
+  getCurrentUser,
+} from "../fetchers/fetchers";
 export default function Homepage() {
   const [isPopupOpen, setPopupOpen] = useState(false);
-
+  const [test, setTest] = useState(null);
   const togglePopup = () => {
     setPopupOpen(!isPopupOpen);
   };
+
+  useEffect(() => {
+    console.log(test);
+  }, [test]);
   const nav = useNavigate();
   return (
     <>

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 public class ChatService {
@@ -26,5 +27,9 @@ public class ChatService {
 
     public List<Chat> findChatsOfUser(Integer id){
         return chatRepository.findChatsByUserId(id);
+    }
+
+    public Object findChatByUsers(Integer id1,Integer id2){
+        return chatRepository.findChatByUsers(id1,id2).orElse(null);
     }
 }

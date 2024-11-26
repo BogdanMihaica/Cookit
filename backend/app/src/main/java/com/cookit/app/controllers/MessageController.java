@@ -17,7 +17,7 @@ public class MessageController {
     MessageService messageService;
 
     @MessageMapping("/chat/{chatId}")   //basically this is /app/chat/{chatId}, where we send the message
-    @SendTo("/chat/{chatId}")   //this is /topic/chat/{chatId} , the place where our partner is subscribed
+    @SendTo("/topic/chat/{chatId}")   //this is /topic/chat/{chatId} , the place where our partner is subscribed
     public Message sendMessage(@DestinationVariable String chatId, Message message)
     {
         messageService.saveMessage(message);
@@ -25,7 +25,7 @@ public class MessageController {
     }
 
     @MessageMapping("/user/{userId}")
-    @SendTo("/user/{userId}")
+    @SendTo("/topic/user/{userId}")
     public Notification sendNotification(@DestinationVariable String userId, Notification notification)
     {
         return notification;
